@@ -18,7 +18,7 @@ function AppRouter() {
             <Route path="/" element={<Home />} />
             <Route path="about" element={< About/>} />
             <Route path="favourites" element={<Favourites />} />
-            <Route path="individual-movie" element={<IndividualMovie />} />
+            <Route path="individual-movie/:id" element={<IndividualMovie />} />
           </Routes>
 
         </main>
