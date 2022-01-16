@@ -1,7 +1,9 @@
+import { getYear } from '../utilities/Date';
+
 function Footer() {
     return (
         <footer>
-            helllo...
+            <p>&copy; {getYear()} Chris Zsolyomy, Lily Zavaglia, Lucille Chesshire.</p>
         </footer>
     )
 }
