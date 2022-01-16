@@ -4,9 +4,10 @@ function Footer() {
     return (
         <footer>
             <div className='hLine'></div>
-            <p>&copy; {getYear()} Chris Zsolyomy, Lily Zavaglia, Lucille Chesshire.</p>
+            <div className='hLine'></div>
+            <p><span>&copy; {getYear()} Chris Zsolyomy</span> <span>Lily Zavaglia</span> <span>Lucille Chesshire</span></p>
         </footer>
     )
 }
 
-export default Footer
+export default Footer;

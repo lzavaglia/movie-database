@@ -1,0 +1,30 @@
+@use '../default/universalStyles' as *;
+
+footer {
+    background-color: $backgroundColor;
+    color: $textColorLight;
+    text-align: center;
+    padding-bottom: 0.1rem;
+    font-family: $bodyFont;
+
+    .hLine {
+        height: 0.2rem;
+        width: 100%;
+        background-color: $accentColor;
+        margin-bottom: 1rem;
+    }
+
+    span {
+        display: block;
+
+        @media (min-width: em(12.5)){
+            display: inline;
+        }
+
+    }
+
+
+}
+
+
+
