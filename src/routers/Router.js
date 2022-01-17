@@ -15,7 +15,11 @@ function AppRouter() {
       <Header />
         <main>
           <Routes>
-            <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home sort="popular"/>} />
+          <Route path="/sort/popular" element={<Home sort="popular"/>} />
+          <Route path="/sort/top-rated" element={<Home sort="top_rated"/>} />
+          <Route path="/sort/now-playing" element={<Home sort="now_playing"/>} />
+          <Route path="/sort/upcoming" element={<Home sort="upcoming"/>} />
             <Route path="about" element={< About/>} />
             <Route path="favourites" element={<Favourites />} />
             <Route path="individual-movie/:id" element={<IndividualMovie />} />
