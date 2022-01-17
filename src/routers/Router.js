@@ -4,10 +4,10 @@ import { Routes, Route } from "react-router-dom";
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 // Pages
-import Home from '../components/Home';
-import About from '../components/About';
-import Favourites from '../components/Favourites';
-import IndividualMovie from '../components/IndividualMovie';
+import Home from '../pages/Home';
+import About from '../pages/About';
+import Favourites from '../pages/Favourites';
+import IndividualMovie from '../pages/IndividualMovie';
 
 function AppRouter() {
   return (
