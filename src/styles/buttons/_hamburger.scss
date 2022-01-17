@@ -1,0 +1,31 @@
+@use '../default/universalStyles' as *;
+
+
+.btn {
+    position: fixed;
+    top: 2rem;
+    left: 1rem;
+    &_burger{
+        &,
+        &::before,
+        &::after {
+            width: 2rem;
+            height: 4px;
+            background: $textColorLight;
+        }
+
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+        }
+
+        &::before {
+            transform: translateY(-12px);
+        }
+
+        &::after {
+            transform: translateY(12px);
+        }
+    }
+}

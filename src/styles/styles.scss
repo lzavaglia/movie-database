@@ -1,5 +1,7 @@
 //Components
 @use './components/footer';
+@use './components/header';
+@use './buttons/hamburger';
 
 //Google fonts - Import
 @import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');

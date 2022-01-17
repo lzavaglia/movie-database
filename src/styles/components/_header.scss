@@ -1,0 +1,53 @@
+@use '../default/universalStyles' as *;
+
+header {
+    background-color: $backgroundColor;
+    // padding: 0.1rem;
+}
+
+.btn {
+    position: fixed;
+    top: 2rem;
+    left: 1rem;
+    &_burger{
+        &,
+        &::before,
+        &::after {
+            width: 2rem;
+            height: 4px;
+            background: $textColorLight;
+        }
+
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+        }
+
+        &::before {
+            transform: translateY(-12px);
+        }
+
+        &::after {
+            transform: translateY(12px);
+        }
+    }
+}
+
+li {
+    color: $textColorLight;
+    list-style: none;
+}
+
+a {
+    color: $textColorLight;
+    text-decoration: none;
+}
+
+.hLine {
+    height: 0.2rem;
+    width: 100%;
+    background-color: $accentColor;
+    margin-bottom: 1rem;
+    bottom: 0rem;
+}
