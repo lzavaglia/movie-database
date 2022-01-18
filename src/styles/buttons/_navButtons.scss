@@ -13,9 +13,16 @@
 .filter-btns {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
+ul {
+    padding-inline-start: 0;
+}
 
+li {
+    list-style-type: none;
+}
 
 .filter a {
     color: $textColorDark;
@@ -24,6 +31,6 @@
 
 .filter:active {
     background-color: $textColorLight;
-    border: 1px solid $accentColor;
+    border: 2px solid $accentColor;
 }
 
