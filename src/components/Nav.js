@@ -1,9 +1,17 @@
 import { Link } from "react-router-dom";
 
-const Nav = () => {
+const Nav = ({ handleShowHideNav }) => {
+    
+    function closeNav(e){
+        if(window.innerWidth < 600){
+            handleShowHideNav();
+        }else{
+            e.target.blur();
+        }
+    }
 
     return (
-        <nav>
+        <nav className="main-nav" onClick={closeNav}>
             <ul>
                 <li><Link to="/">Home</Link></li>
                 <li><Link to="favourites">Favourites</Link></li>
@@ -11,8 +19,7 @@ const Nav = () => {
             </ul>
         </nav>
     );
-
-
-}
+    
+};
 
 export default Nav;
