@@ -1,47 +1,27 @@
 @use '../default/universalStyles' as *;
+@use '../utilities/mixins' as *;
 
 header {
     background-color: $backgroundColor;
-    // padding: 0.1rem;
-}
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    align-items: center;
+    font-family: $headerFont;
 
-.btn {
-    position: fixed;
-    top: 2rem;
-    left: 1rem;
-    &_burger{
-        &,
-        &::before,
-        &::after {
-            width: 2rem;
-            height: 4px;
-            background: $textColorLight;
-        }
-
-        &::before,
-        &::after {
-            content: '';
-            position: absolute;
-        }
-
-        &::before {
-            transform: translateY(-12px);
-        }
-
-        &::after {
-            transform: translateY(12px);
-        }
+    a {
+        color: $textColorLight;
+        text-decoration: none;
     }
-}
 
-li {
-    color: $textColorLight;
-    list-style: none;
-}
+    .filmtown a{
+        color: $accentColor;
+        text-transform: uppercase;
+        font-size: $titleFontSize;
+    }
 
-a {
-    color: $textColorLight;
-    text-decoration: none;
 }
 
 .hLine {

@@ -1,0 +1,29 @@
+@use '../default/universalStyles' as *;
+@use '../utilities/mixins' as *;
+
+.filter {
+    // display: flex;
+    background-color: $accentColor;
+    padding: 0.4rem 0.5rem;
+    text-align: center;
+    margin: 0.3rem;
+    width:100px;
+}
+
+.filter-btns {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+
+.filter a {
+    color: $textColorDark;
+    text-transform: uppercase;
+}
+
+.filter:active {
+    background-color: $textColorLight;
+    border: 1px solid $accentColor;
+}
+
