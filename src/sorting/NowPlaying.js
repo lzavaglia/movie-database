@@ -6,4 +6,4 @@ function NowPlaying() {
     )
 }
 
-export default NowPlaying
+export default NowPlaying;
