@@ -7,10 +7,21 @@ body {
 
 p {
     color:$textColorLight;
-    
 }
 p.movie-title {
     line-height: 0;
+    font-family: $headerFont;
+    font-size: $mobileTitleFontSize;
+}
+p.movie-date {
+    line-height: 0;
+    font-family: $headerFont;
+    font-size: $mobileTitleFontSize;
+}
+p.movie-rating {
+    line-height: 0;
+    font-family: $headerFont;
+    font-size: $mobileTitleFontSize;
 }
 
 .heart {
