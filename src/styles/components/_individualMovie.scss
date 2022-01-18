@@ -2,24 +2,16 @@
 
 .indiv-poster-container {
     margin-bottom: 0;
-
 }
 .indiv-mass-poster {
     max-width: 270px;
-    // margin: 0 auto;
-
 }
 
 .indiv-movie-title {
     font-family: $headerFont;
     font-size: $mobileTitleFontSize;
     color: $textColorLight;
-}
-
-.indiv-movie-rating {
-    font-family: $headerFont;
-    font-size: $mobileTitleFontSize;
-    color: $textColorLight;
+    margin: 0 auto;
 }
 
 .indiv-movie-descrip {
@@ -116,7 +108,7 @@
     }
     
     .indiv-movie-rating {
-        font-size: $headerFontSize;
+        font-size: $bodyFontSize;
     }
     
     .indiv-movie-descrip {

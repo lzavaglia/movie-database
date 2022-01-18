@@ -50,7 +50,8 @@
     .about-text {
         max-width: 675px;
         font-size: $bodyFontSize;
-        text-align: center !important;
+        text-align: center;
+        margin: 0 auto;
     }
     .about-us {
         font-size: $headerFontSize;
