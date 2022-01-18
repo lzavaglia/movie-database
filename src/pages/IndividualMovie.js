@@ -4,6 +4,7 @@ function IndividualMovie() {
     return (
         <div>
            <IndividualMovieCard/>
+           <h2>test</h2>
         </div>
     )
 }

@@ -17,43 +17,40 @@
     margin-bottom: 50px;
 }
 
-h2 {
+.about-welcome {
     font-family: $headerFont;
     font-size: $mobileTitleFontSize;
     color: $textColorLight;
     text-align: center;
 }
 
-p {
+.about-text {
     font-family: $bodyFont;
     font-size: $mobileBodyTextSize;
     color: $textColorLight;
-    text-align: center;
+    text-align: center !important;
     margin-bottom: 19.92px;
     margin-top: 0;
 }
 
-body {
-    margin: $pageMarginMobile;
-}
-
 @media (min-width: 520px) {
-    p {
+    .about-text {
         max-width: 400px;
     } 
 }
 
 @media (min-width: 1000px) {
 
-    h2 {
+    .about-welcome {
         font-family: $headerFont;
         font-size: $headerFontSize;
         color: $textColorLight;
         text-align: center;
     }
-    p {
+    .about-text {
         max-width: 675px;
         font-size: $bodyFontSize;
+        text-align: center !important;
     }
     .about-us {
         font-size: $headerFontSize;
