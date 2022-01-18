@@ -7,7 +7,7 @@ header {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row-reverse;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     font-family: $headerFont;
 
@@ -16,12 +16,45 @@ header {
         text-decoration: none;
     }
 
+    .btn-main-nav {
+        padding: 5px 20px 0 0;
+    }
+
     .filmtown a{
         color: $accentColor;
         text-transform: uppercase;
         font-size: $titleFontSize;
     }
 
+    .ham-title {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+        left: 10px;
+        width: 100%;
+
+        @media (min-width: 900px){
+            width: 350px;
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: flex-end;
+            left: 10px;
+            // width: 100%;
+        }
+    }
+
+    @media (min-width: 900px){
+        display: flex;
+        flex-direction: row;
+    }
+
+    
+
+}
+
+.navSortParent {
+    display: flex;
+    justify-content: center;
 }
 
 .hLine {
@@ -30,4 +63,5 @@ header {
     background-color: $accentColor;
     margin-bottom: 1rem;
     bottom: 0rem;
+    order: 10000;
 }

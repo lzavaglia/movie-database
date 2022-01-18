@@ -8,21 +8,9 @@ body {
 p {
     color:$textColorLight;
 }
-p.movie-title {
-    line-height: 0;
-    font-family: $headerFont;
-    font-size: $mobileTitleFontSize;
-}
-p.movie-date {
-    line-height: 0;
-    font-family: $headerFont;
-    font-size: $mobileTitleFontSize;
-}
-p.movie-rating {
-    line-height: 0;
-    font-family: $headerFont;
-    font-size: $mobileTitleFontSize;
-}
+// p.movie-title {
+//     line-height: 0;
+// }
 
 .heart {
     padding: 3px;
@@ -36,7 +24,7 @@ p.movie-rating {
 }
 
 .info-image-container {
-    max-width: 270px;
+    max-width: 230px;
     margin: 0 auto;
 }
 
@@ -93,6 +81,9 @@ img.mass-poster {
     
 }
 
-
-
-
+@media (min-width: 1625px) {
+    .movie-container {
+        max-width: 1600px;
+        margin: 0 auto;
+    }
+}
