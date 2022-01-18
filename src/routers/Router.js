@@ -22,7 +22,7 @@ function AppRouter() {
           <Route path="/sort/upcoming" element={<Home sort="upcoming"/>} />
             <Route path="about" element={< About/>} />
             <Route path="favourites" element={<Favourites />} />
-            <Route path="individual-movie/:id" element={<IndividualMovie />} />
+            <Route path="movie/:id" element={<IndividualMovie />} />
           </Routes>
 
         </main>
