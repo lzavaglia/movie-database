@@ -20,8 +20,8 @@
     color: $textColorLight;
     max-width: 70%;
     margin: 0 auto;
-
 }
+
 .indiv-release-date {
     font-family: $bodyFont;
     font-size: $mobileBodyTextSize;
@@ -103,6 +103,16 @@
 }
 
 @media (min-width: 1000px) {
+
+    .indiv-poster-container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    // .indiv-movie-info-container {
+
+    // }
+
     .indiv-movie-title {
         font-size: $headerFontSize;
     }
@@ -113,7 +123,7 @@
     
     .indiv-movie-descrip {
         font-size: $bodyFontSize;
-        max-width: 70%;
+        max-width: 50%;
         margin: 0 auto;
     
     }
@@ -123,9 +133,8 @@
     }
     .indiv-run-time {
         font-size: $bodyFontSize;
-
-    
     }
+
     .indiv-view-rating {
         font-size: $bodyFontSize;
     
