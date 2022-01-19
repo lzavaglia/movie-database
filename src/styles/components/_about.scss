@@ -28,7 +28,7 @@
     font-family: $bodyFont;
     font-size: $mobileBodyTextSize;
     color: $textColorLight;
-    text-align: center !important;
+    text-align: center;
     margin-bottom: 19.92px;
     margin-top: 0;
 }
@@ -50,7 +50,8 @@
     .about-text {
         max-width: 675px;
         font-size: $bodyFontSize;
-        text-align: center !important;
+        text-align: center;
+        margin: 0 auto;
     }
     .about-us {
         font-size: $headerFontSize;
