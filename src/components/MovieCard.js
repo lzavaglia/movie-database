@@ -1,5 +1,4 @@
 import {Link} from 'react-router-dom';
-import moviePoster from '../images/massImg.png';
 import '../styles/components/_moviePoster.scss';
 import heart from '../images/heart.svg';
 import noPoster from '../images/no-movie-poster.jpg';
