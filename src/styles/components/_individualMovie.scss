@@ -1,17 +1,146 @@
 @import '../default/universalStyles.scss';
 
-// h2 {
-//     font-family: $headerFont;
-//     font-size: $mobileTitleFontSize;
-//     color: $textColorLight;
-//     text-align: center;
-// }
+.indiv-poster-container {
+    margin-bottom: 0;
+}
+.indiv-mass-poster {
+    max-width: 270px;
+}
 
-// p {
-//     font-family: $bodyFont;
-//     font-size: $mobileBodyTextSize;
-//     color: $textColorLight;
-//     text-align: center;
-//     margin-bottom: 19.92px;
-//     margin-top: 0;
-// }
+.indiv-movie-title {
+    font-family: $headerFont;
+    font-size: $mobileTitleFontSize;
+    color: $textColorLight;
+    margin: 0 auto;
+}
+
+.indiv-movie-descrip {
+    font-family: $bodyFont;
+    font-size: $mobileBodyTextSize;
+    color: $textColorLight;
+    max-width: 70%;
+    margin: 0 auto;
+}
+
+.indiv-release-date {
+    font-family: $bodyFont;
+    font-size: $mobileBodyTextSize;
+    color: $textColorLight;
+    text-align: center;
+
+}
+.indiv-run-time {
+    font-family: $bodyFont;
+    font-size: $mobileBodyTextSize;
+    color: $textColorLight;
+    text-align: center;
+
+}
+.indiv-view-rating {
+    font-family: $bodyFont;
+    font-size: $mobileBodyTextSize;
+    color: $textColorLight;
+    text-align: center;
+
+}
+.indiv-movie-genre {
+    font-family: $bodyFont;
+    font-size: $mobileBodyTextSize;
+    color: $textColorLight;
+    text-align: center;
+
+}
+
+@media (min-width: 520px) {
+    .indiv-movie-title {
+        font-family: $headerFont;
+        font-size: $mobileTitleFontSize;
+        color: $textColorLight;
+    }
+    
+    .indiv-movie-rating {
+        font-family: $headerFont;
+        font-size: $mobileTitleFontSize;
+        color: $textColorLight;
+    }
+    
+    .indiv-movie-descrip {
+        font-family: $bodyFont;
+        font-size: $mobileBodyTextSize;
+        color: $textColorLight;
+        max-width: 70%;
+        margin: 0 auto;
+    
+    }
+    .indiv-release-date {
+        font-family: $bodyFont;
+        font-size: $mobileBodyTextSize;
+        color: $textColorLight;
+        text-align: center;
+    
+    }
+    .indiv-run-time {
+        font-family: $bodyFont;
+        font-size: $mobileBodyTextSize;
+        color: $textColorLight;
+        text-align: center;
+    
+    }
+    .indiv-view-rating {
+        font-family: $bodyFont;
+        font-size: $mobileBodyTextSize;
+        color: $textColorLight;
+        text-align: center;
+    
+    }
+    .indiv-movie-genre {
+        font-family: $bodyFont;
+        font-size: $mobileBodyTextSize;
+        color: $textColorLight;
+        text-align: center;
+    
+    }
+}
+
+@media (min-width: 1000px) {
+
+    .indiv-poster-container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    // .indiv-movie-info-container {
+
+    // }
+
+    .indiv-movie-title {
+        font-size: $headerFontSize;
+    }
+    
+    .indiv-movie-rating {
+        font-size: $bodyFontSize;
+    }
+    
+    .indiv-movie-descrip {
+        font-size: $bodyFontSize;
+        max-width: 50%;
+        margin: 0 auto;
+    
+    }
+    .indiv-release-date {
+        font-size: $bodyFontSize;
+    
+    }
+    .indiv-run-time {
+        font-size: $bodyFontSize;
+    }
+
+    .indiv-view-rating {
+        font-size: $bodyFontSize;
+    
+    }
+    .indiv-movie-genre {
+        font-size: $bodyFontSize;
+    
+    }
+}
