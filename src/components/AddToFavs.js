@@ -1,16 +1,16 @@
 import { useState } from "react";
 
-function AddToFavs() {
+const movieFavs = 'movie-favs';
 
-    const addFavouriteMovie = (movie) => {
-		const newFavouriteList = [favourites, movie] = useState(null);
-		setFavourites(newFavouriteList);
-	};
-    return (
-        <div>
-            <Movies/>
-        </div>
-    )
-}
+function addToFavs(){
+    let favsFromStorage = localStorage.getItem(movieFavs);
+    if(favsFromStorage === null){
+        favsFromStorage = [];
+    }else{
+        favsFromStorage = JSON.parse(favsFromStorage);
+    }
+    return favsFromStorage;
+  }
+  
 
 export default AddToFavs;
