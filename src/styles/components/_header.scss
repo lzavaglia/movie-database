@@ -4,9 +4,7 @@
 header {
     background-color: $backgroundColor;
     padding: 0;
-    // display: flex;
     flex-wrap: wrap;
-    // flex-direction: row-reverse;
     justify-content: space-between;
     align-items: center;
     font-family: $headerFont;
@@ -25,7 +23,6 @@ header {
     .filmtown a{
         color: $accentColor;
         text-transform: uppercase;
-        // font-size: $titleFontSize;
     }
 
     .ham-title {
@@ -41,7 +38,6 @@ header {
             flex-direction: row-reverse;
             justify-content: flex-end;
             left: 10px;
-            // width: 100%;
         }
     }
 
@@ -62,6 +58,11 @@ header {
     display: flex;
     justify-content: center;
     margin: 0 auto;
+
+    @media (min-width: 949px) {
+        justify-content: flex-end;
+        flex: 1 1 auto;
+    }
 }
 
 .hLine {
