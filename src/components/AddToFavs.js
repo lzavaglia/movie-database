@@ -13,4 +13,4 @@ function addToFavs(){
   }
   
 
-export default AddToFavs;
+export default addToFavs;

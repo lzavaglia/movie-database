@@ -8,7 +8,9 @@ header {
     justify-content: space-between;
     align-items: center;
     font-family: $headerFont;
-    padding: 4rem 0.5rem 0 2rem;
+    padding: 4rem 0.5rem 0 0.5rem;
+    max-width: 1600px;
+    margin: 0 auto;
     
 
     a {
@@ -31,6 +33,7 @@ header {
         justify-content: flex-end;
         left: 10px;
         width: 100%;
+        margin: 0.3rem;
 
         @media (min-width: 800px){
             width: 350px;
