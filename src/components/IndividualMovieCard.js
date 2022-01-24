@@ -5,6 +5,28 @@ import "../styles/components/_moviePoster.scss";
 import "../styles/components/_individualMovie.scss";
 import noPoster from "../images/no-movie-poster.jpg";
 
+const dateFormat = (string) => {
+  let options = {year: 'numeric', month: 'long', day: 'numeric' };
+  return new Date(string).toLocaleDateString([],options);
+}
+
+// const getGenres = genres => {
+//   let content = [];
+//   for (let i = 0; i < movie.genres; i++) {
+//   const 
+//   movie.genres[i].name}
+
+
+
+function timeConvert(n) {
+  var num = n;
+  var hours = (num / 60);
+  var rhours = Math.floor(hours);
+  var minutes = (hours - rhours) * 60;
+  var rminutes = Math.round(minutes);
+  return rhours + "h " + rminutes + "m";
+  }
+
 function IndividualMovieCard({ movie }) {
   if (!movie) {
     return null;
@@ -13,7 +35,7 @@ function IndividualMovieCard({ movie }) {
     return (
       <>
         <div className="indiv-poster-container">
-          {movie.poster_path === null ? ( // 
+          {movie.poster_path === null ? (
             <img src={noPoster} alt="No Poster" />
           ) : (
             <img
@@ -26,10 +48,14 @@ function IndividualMovieCard({ movie }) {
           <p className="indiv-movie-title">{movie.title}</p>
           <div className="indiv-movie-info-container">
             <p className="indiv-movie-descrip">{movie.overview}</p>
-            <p className="indiv-release-date">{movie.release_date}</p>
-            <p className="indiv-run-time"></p>
-            <p className="indiv-view-rating">{movie.vote_average}</p>
-            <p className="indiv-movie-genre"></p>
+            <p>Original Language: {movie.original_language}</p>
+            <p className="indiv-movie-genre">Genre: 
+           
+            </p>
+            <p className="indiv-release-date">Release Date: {dateFormat(movie.release_date)}</p>
+            <p className="indiv-run-time">Runtime: {timeConvert(movie.runtime)}</p>
+            <p className="indiv-view-rating">Rating:{movie.vote_average *10}%</p>
+            
           </div>
         </div>
       </>

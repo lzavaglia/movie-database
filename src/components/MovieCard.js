@@ -3,7 +3,10 @@ import {Link} from 'react-router-dom';
 import '../styles/components/_moviePoster.scss';
 import noPoster from '../images/no-movie-poster.jpg';
 
-
+const dateFormat = (string) => {
+    let options = {year: 'numeric', month: 'long', day: 'numeric' };
+    return new Date(string).toLocaleDateString([],options);
+}
 
 function MovieCard({ movie }) {
     const [isLiked, setIsLiked] = useState(false);
@@ -23,9 +26,10 @@ function MovieCard({ movie }) {
             
             </div>
             <div className='movie-info-container'>
-            <p className='movie-date'>{movie.release_date}</p> 
-            <div onClick ={() => setIsLiked(!isLiked)}>{isLiked ? <LikeHeart/>:<UnLikeHeart/>}</div>             
+            <p className='movie-date'>{dateFormat(movie.release_date)}</p> 
             {/* <p className='movie-rating'>PG</p> */}
+            <div onClick ={() => setIsLiked(!isLiked)}>{isLiked ? <LikeHeart/>:<UnLikeHeart/>}</div>             
+            
             </div>
         
         
