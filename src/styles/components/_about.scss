@@ -29,13 +29,14 @@
     font-size: $mobileBodyTextSize;
     color: $textColorLight;
     text-align: center;
-    margin-bottom: 19.92px;
-    margin-top: 0;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    max-width: 80%;
 }
 
 @media (min-width: 520px) {
     .about-text {
-        max-width: 400px;
+        max-width: 450px;
     } 
 }
 
@@ -52,6 +53,7 @@
         font-size: $bodyFontSize;
         text-align: center;
         margin: 0 auto;
+        margin-bottom: 60px;
     }
     .about-us {
         font-size: $headerFontSize;
@@ -59,6 +61,6 @@
         margin-left: 10px;
     }
     .hLineShort {
-        width: 400px;
+        width: 350px;
     }
 }
