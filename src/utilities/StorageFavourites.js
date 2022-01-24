@@ -16,6 +16,7 @@ export const setStorage = (newItem) => {
     let favMovies = getStorage();
     if( favMovies !== false){
         favMovies.push(newItem);
+        console.log (favMovies);
     }else{
         favMovies = [newItem];
     }
@@ -42,7 +43,7 @@ export const removeFromStorage = (movie) => {
     let indexOfMovieToRemove = items.findIndex(Movie);
     items.splice(indexOfMovieToRemove, 1);
     let movieForStorage = JSON.stringify(items);
-    localStorage.setItems(STORAGE_MOVIE_FAVS, movieForStorage);
+    localStorage.setItem(STORAGE_MOVIE_FAVS, movieForStorage);
     return items;
 }
 

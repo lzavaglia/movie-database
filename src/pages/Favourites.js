@@ -1,8 +1,13 @@
-function Favourites() {
+import Movies from "../components/Movies";
+import getStorage from "../utilities/StorageFavourites";
+
+function Favourites({moviesData}) {
+
+    const favouriteMovie = getStorage();
     return (
-        <div>
-           favourites 
-        </div>
+        <section className='home-page'>
+        {moviesData !== null && <Movies movies ={favouriteMovie}/>}
+        </section>
     )
 }
 
