@@ -16,7 +16,6 @@ export const setStorage = (newItem) => {
     let favMovies = getStorage();
     if( favMovies !== false){
         favMovies.push(newItem);
-        console.log (favMovies);
     }else{
         favMovies = [newItem];
     }
