@@ -11,12 +11,6 @@ const dateFormat = (string) => {
 }
 
 
-// const getGenres = genres => {
-//   let content = [];
-//   for (let i = 0; i < movie.genres; i++) {
-//   const 
-//   movie.genres[i].name}
-
 
 
 function timeConvert(n) {
@@ -33,7 +27,7 @@ function IndividualMovieCard({ movie }) {
     return null;
   } else {
     const movieGenres = movie.genre;
-    // is a movie
+
     return (
       <>
         <div className="indiv-poster-container">
@@ -51,9 +45,7 @@ function IndividualMovieCard({ movie }) {
           <div className="indiv-movie-info-container">
             <p className="indiv-movie-descrip">{movie.overview}</p>
             
-            {/* {movieGenres.map(({ name, id }) => (
-              <p key={name}>this is the name: {name} this is the id {id}.</p>
-            ))} */}
+
             <div className="details-info">
             <p>Original Language: {movie.original_language}</p>
                             {movie.genres.length === 0  ?
