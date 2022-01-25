@@ -34,15 +34,18 @@ function MovieCard({ movie, updateFavs }) {
     return (
         <div className='info-image-container'>
         <div className='poster-container'>
-
+        <div className='hover-container'><p>{movie.overview}</p><div className="button-container">
+                                <Link to={`/movie/${movie.id}`}><button className="movie-button">More Info</button></Link>
+                            </div></div>
+        <div className='hover-info-display'></div>
         {movie.poster_path === null ?
                     <img src={noPoster} alt="No Poster" />:
                     <Link to={`/movie/${movie.id}`}><img className='mass-poster' src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} alt={movie.title} /></Link>
                 }
-            </div>
+        
             <div className='title-icon-container'>
             <p className='movie-title'>{movie.title}</p>
-            
+            </div>
             </div>
             <div className='movie-info-container'>
 

@@ -14,6 +14,8 @@ const dateFormat = (string) => {
 }
 
 
+
+
 function timeConvert(n) {
   var num = n;
   var hours = (num / 60);
@@ -66,9 +68,7 @@ function IndividualMovieCard({ movie, updateFavs }) {
           <div className="indiv-movie-info-container">
             <p className="indiv-movie-descrip">{movie.overview}</p>
             
-            {/* {movieGenres.map(({ name, id }) => (
-              <p key={name}>this is the name: {name} this is the id {id}.</p>
-            ))} */}
+
             <div className="details-info">
             <p>Original Language: {movie.original_language}</p>
 

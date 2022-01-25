@@ -15,14 +15,14 @@ p {
     max-width: 24px;
 
 }
-.poster-container {
-    margin-bottom: 0;
-}
 
 .info-image-container {
     max-width: 230px;
     margin: 0 auto;
+    z-index: -10;
 }
+
+
 
 .movie-info-container {
     display: flex;
@@ -30,14 +30,37 @@ p {
     line-height: 0;
 }
 
-img.mass-poster {
+.poster-container {
     max-width: 269px;
-    max-height: 403px;
-    margin-left: auto;
-    margin-right: auto;
+}
+
+.hover-container {
+    z-index: 10;
+    border: 2px solid $accentColor;
+    padding: .5rem;
+
+    position: absolute;
+    width: 220px;
+    height: 340px; 
+    background-color: black;
+    opacity: 0;
+}
+
+
+
+
+.hover-container:hover {
+    opacity: 100%;
+}
+
+
+
+
+img.mass-poster {
     border: 3px solid $accentColor;
-    margin-top: 3rem;
-    margin-bottom:.5rem;
+    width: 100%;
+    position: relative;
+    z-index: -10;
 }
 
 .title-icon-container {
