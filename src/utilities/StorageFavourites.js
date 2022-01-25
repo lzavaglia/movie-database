@@ -20,8 +20,9 @@ export const setStorage = (newItem) => {
     }else{
         favMovies = [newItem];
     }
-    favMovies = JSON.stringify(favMovies);
-    localStorage.setItem(STORAGE_MOVIE_FAVS, favMovies);
+    const favMoviesForStorage = JSON.stringify(favMovies);
+    localStorage.setItem(STORAGE_MOVIE_FAVS, favMoviesForStorage);
+    return favMovies;
 }
 
 export const getStorage = (storageItem = STORAGE_MOVIE_FAVS) => {

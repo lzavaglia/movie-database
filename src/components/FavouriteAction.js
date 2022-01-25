@@ -5,13 +5,6 @@ import {isMovieInStorage, setStorage, removeFromStorage} from '../utilities/Stor
 // const movieFavs = 'movie-favs';
 
 const Favourites = () => {
-//     let favsFromStorage = localStorage.getItem(STORAGE_MOVIE_FAVS);
-//     if(favsFromStorage === null){
-//         favsFromStorage = [];
-//     }else{
-//         favsFromStorage = JSON.parse(favsFromStorage);
-//     }
-//     return favsFromStorage;
 
     const [movie, setMovie]  = useState(null);
     const [ifFavourited, setIfFavourited] = useState([]);

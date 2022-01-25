@@ -5,25 +5,27 @@ import filledHeart from '../images/filled-heart.svg';
 import heart from '../images/heart.svg';
 import noPoster from '../images/no-movie-poster.jpg';
 import {isMovieInStorage, setStorage, removeFromStorage} from '../utilities/StorageFavourites';
-import {AddMovie, RemoveMovie} from '../components/FavouriteAction';
+// import {AddMovie, RemoveMovie} from '../components/FavouriteAction';
 
 
 
-function MovieCard({ movie }) {
-    const [isLiked, setIsLiked] = useState(false);
+function MovieCard({ movie, updateFavs }) {
+    const [isLiked, setIsLiked] = useState(isMovieInStorage(movie));
 
-    const AddMovie = () => {
-        if(!isMovieInStorage(movie)){
-            setStorage(movie);
+    const addMovie = () => {
+            const updatedFavMovies = setStorage(movie);
             setIsLiked(true);
-        }else{
-            setIsLiked(false);
-        }
+            if(updateFavs !== undefined){
+                updateFavs(updatedFavMovies);
+            }
     }
 
-    const RemoveMovie = () => {
-        removeFromStorage(movie);
+    const removeMovie = () => {
+        const updatedFavMovies = removeFromStorage(movie);
         setIsLiked(false);
+        if(updateFavs !== undefined){
+            updateFavs(updatedFavMovies);
+        }
     }
     
 
@@ -47,12 +49,12 @@ function MovieCard({ movie }) {
                 {/* <div>{isLiked ?
                  <img src={filledHeart} alt='remove from favs'  onClick ={() => setIsLiked(!isLiked)}/> :
                  <img src={heart} alt='add to favs'  onClick ={() => setIsLiked(!isLiked)}/>}</div>     */}
+               {isLiked === true ? <div>
+                    <img src={filledHeart} alt='remove from favs' onClick= {() => removeMovie(movie)}/>
+                </div> :
                 <div>
-                    <img src={filledHeart} alt='remove from favs' onClick= {() => RemoveMovie(movie)}/>
-                </div>
-                <div>
-                    <img src={heart} alt='add to favs' onClick= {() => AddMovie(movie)}/>
-                </div>
+                    <img src={heart} alt='add to favs' onClick= {() => addMovie(movie)}/>
+                </div>}
 
             </div>
         
