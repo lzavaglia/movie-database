@@ -1,9 +1,13 @@
 import { Link } from "react-router-dom";
+import { useState } from "react";
 import moviePoster from "../images/massImg.png";
 //! RE COMMENT IF DOESNT WORK
 import "../styles/components/_moviePoster.scss";
 import "../styles/components/_individualMovie.scss";
 import noPoster from "../images/no-movie-poster.jpg";
+import {isMovieInStorage, setStorage, removeFromStorage} from '../utilities/StorageFavourites';
+import filledHeart from '../images/filled-heart.svg';
+import heart from '../images/heart.svg';
 
 const dateFormat = (string) => {
   let options = {year: 'numeric', month: 'long', day: 'numeric' };
@@ -28,11 +32,30 @@ function timeConvert(n) {
   return rhours + "h " + rminutes + "m";
   }
 
-function IndividualMovieCard({ movie }) {
+function IndividualMovieCard({ movie, updateFavs }) {
+
+  const [isLiked, setIsLiked] = useState(isMovieInStorage(movie));
+
+  const addMovie = () => {
+          const updatedFavMovies = setStorage(movie);
+          setIsLiked(true);
+          if(updateFavs !== undefined){
+              updateFavs(updatedFavMovies);
+          }
+  }
+
+  const removeMovie = () => {
+      const updatedFavMovies = removeFromStorage(movie);
+      setIsLiked(false);
+      if(updateFavs !== undefined){
+          updateFavs(updatedFavMovies);
+      }
+  }
+
   if (!movie) {
     return null;
   } else {
-    const movieGenres = movie.genre;
+    // const movieGenres = movie.genre;
     // is a movie
     return (
       <>
@@ -48,6 +71,7 @@ function IndividualMovieCard({ movie }) {
           )}
          
           <p className="indiv-movie-title">{movie.title}</p>
+
           <div className="indiv-movie-info-container">
             <p className="indiv-movie-descrip">{movie.overview}</p>
             
@@ -56,6 +80,14 @@ function IndividualMovieCard({ movie }) {
             ))} */}
             <div className="details-info">
             <p>Original Language: {movie.original_language}</p>
+
+            {isLiked === true ? <div>
+                    <img src={filledHeart} alt='remove from favs' onClick= {() => removeMovie(movie)}/>
+                </div> :
+                <div>
+                    <img src={heart} alt='add to favs' onClick= {() => addMovie(movie)}/>
+                </div>}
+                
                             {movie.genres.length === 0  ?
                                 <p className="no-genre">N/A</p>
                                 :
