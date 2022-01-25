@@ -4,8 +4,11 @@ footer {
     background-color: $backgroundColor;
     color: $textColorLight;
     text-align: center;
-    padding-bottom: 0.1rem;
+    // padding-bottom: 0.1rem;
     font-family: $bodyFont;
+    padding: 4rem 0.5rem 0 0.5rem;
+    max-width: 1600px;
+    margin: 0 auto;
     
 
     .hLine {
