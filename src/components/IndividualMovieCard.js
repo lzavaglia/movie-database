@@ -10,6 +10,7 @@ const dateFormat = (string) => {
   return new Date(string).toLocaleDateString([],options);
 }
 
+
 // const getGenres = genres => {
 //   let content = [];
 //   for (let i = 0; i < movie.genres; i++) {
@@ -31,6 +32,7 @@ function IndividualMovieCard({ movie }) {
   if (!movie) {
     return null;
   } else {
+    const movieGenres = movie.genre;
     // is a movie
     return (
       <>
@@ -48,13 +50,26 @@ function IndividualMovieCard({ movie }) {
           <p className="indiv-movie-title">{movie.title}</p>
           <div className="indiv-movie-info-container">
             <p className="indiv-movie-descrip">{movie.overview}</p>
+            
+            {/* {movieGenres.map(({ name, id }) => (
+              <p key={name}>this is the name: {name} this is the id {id}.</p>
+            ))} */}
+            <div className="details-info">
             <p>Original Language: {movie.original_language}</p>
-            <p className="indiv-movie-genre">Genre: 
-           
-            </p>
+                            {movie.genres.length === 0  ?
+                                <p className="no-genre">N/A</p>
+                                :
+                                <p className="indiv-movie-genre">Genres: {
+                                    movie.genres.map(genres=>genres.name).length>1?
+                                    movie.genres.map(genres=>genres.name).join(", "): 
+                                    movie.genres.map(genres=>genres.name)
+                                    }</p>
+                            }
+                        
+                        </div>
             <p className="indiv-release-date">Release Date: {dateFormat(movie.release_date)}</p>
             <p className="indiv-run-time">Runtime: {timeConvert(movie.runtime)}</p>
-            <p className="indiv-view-rating">Rating:{movie.vote_average *10}%</p>
+            <p className="indiv-view-rating">Rating: {movie.vote_average *10}%</p>
             
           </div>
         </div>
