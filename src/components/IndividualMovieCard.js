@@ -48,8 +48,7 @@ function IndividualMovieCard({ movie, updateFavs }) {
   if (!movie) {
     return null;
   } else {
-    // const movieGenres = movie.genre;
-    // is a movie
+
     return (
       <>
         <div className="indiv-poster-container">
