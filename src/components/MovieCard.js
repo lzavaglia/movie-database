@@ -6,7 +6,10 @@ import heart from '../images/heart.svg';
 import noPoster from '../images/no-movie-poster.jpg';
 import {isMovieInStorage, setStorage, removeFromStorage} from '../utilities/StorageFavourites';
 
-
+const dateFormat = (string) => {
+    let options = {year: 'numeric', month: 'long', day: 'numeric' };
+    return new Date(string).toLocaleDateString([],options);
+}
 
 function MovieCard({ movie, updateFavs }) {
     const [isLiked, setIsLiked] = useState(isMovieInStorage(movie));
@@ -43,7 +46,7 @@ function MovieCard({ movie, updateFavs }) {
             </div>
             <div className='movie-info-container'>
 
-                <p className='movie-date'>{movie.release_date}</p> 
+                <p className='movie-date'>{dateFormat(movie.release_date)}</p> 
 
                {isLiked === true ? <div>
                     <img src={filledHeart} alt='remove from favs' onClick= {() => removeMovie(movie)}/>
