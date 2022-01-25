@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import moviePoster from "../images/massImg.png";
-//! RE COMMENT IF DOESNT WORK
 import "../styles/components/_moviePoster.scss";
 import "../styles/components/_individualMovie.scss";
 import noPoster from "../images/no-movie-poster.jpg";
@@ -13,14 +12,6 @@ const dateFormat = (string) => {
   let options = {year: 'numeric', month: 'long', day: 'numeric' };
   return new Date(string).toLocaleDateString([],options);
 }
-
-
-// const getGenres = genres => {
-//   let content = [];
-//   for (let i = 0; i < movie.genres; i++) {
-//   const 
-//   movie.genres[i].name}
-
 
 
 function timeConvert(n) {
@@ -37,11 +28,11 @@ function IndividualMovieCard({ movie, updateFavs }) {
   const [isLiked, setIsLiked] = useState(isMovieInStorage(movie));
 
   const addMovie = () => {
-          const updatedFavMovies = setStorage(movie);
-          setIsLiked(true);
-          if(updateFavs !== undefined){
-              updateFavs(updatedFavMovies);
-          }
+      const updatedFavMovies = setStorage(movie);
+      setIsLiked(true);
+      if(updateFavs !== undefined){
+          updateFavs(updatedFavMovies);
+      }
   }
 
   const removeMovie = () => {
