@@ -22,17 +22,16 @@
     color: $textColorLight;
     text-align: center;
     margin: 15px 0 15px 0;
-    justify-content: left;
 }
 
 .indiv-heart{
-    justify-content: right;
+    float: right;
 }
 
-.indiv-title-and-heart{
-    display: flex;
-    flex-wrap: wrap;
-}
+// .indiv-title-and-heart{
+//     display: flex;
+//     flex-wrap: wrap;
+// }
 
 .indiv-movie-descrip {
     font-family: $bodyFont;
