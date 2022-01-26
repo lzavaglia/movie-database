@@ -12,18 +12,26 @@ footer {
     
 
     .hLine {
-        height: 0.2rem;
+        height: .2rem;
         width: 100%;
         background-color: $accentColor;
         margin-bottom: 1rem;
+    }
+
+    .hLine2 {
+        height: .2rem;
     }
 
     span {
         display: block;
     }
 
-
+    @media (min-width : 382px) {
+        padding: 4rem 2rem 0 2rem;
+    }
 }
+
+
 
 
 
