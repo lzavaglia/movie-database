@@ -4,6 +4,11 @@
     margin-bottom: 0;
 }
 
+.indiv-details {
+    max-width: 50%;
+    margin: 0 auto;
+}
+
 .indiv-mass-poster {
     max-width: 270px;
     margin-left: auto;
@@ -17,6 +22,16 @@
     color: $textColorLight;
     text-align: center;
     margin: 15px 0 15px 0;
+    justify-content: left;
+}
+
+.indiv-heart{
+    justify-content: right;
+}
+
+.indiv-title-and-heart{
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .indiv-movie-descrip {
@@ -25,9 +40,17 @@
     color: $textColorLight;
     max-width: 70%;
     margin: 0 auto;
+    text-align: left;
 }
 
 .indiv-release-date {
+    font-family: $bodyFont;
+    font-size: $mobileBodyTextSize;
+    color: $textColorLight;
+    text-align: center;
+
+}
+.indiv-language {
     font-family: $bodyFont;
     font-size: $mobileBodyTextSize;
     color: $textColorLight;
@@ -62,6 +85,14 @@
 }
 
 @media (min-width: 520px) {
+
+    img.indiv-mass-poster {
+        max-width: 270px;
+        max-height: 405px;
+        margin-left: auto;
+        margin-right: auto;
+        // display: block;
+    }
     .indiv-movie-title {
         font-family: $headerFont;
         font-size: $hamburgerTextSize;
@@ -78,11 +109,18 @@
         font-family: $bodyFont;
         font-size: $mobileBodyTextSize;
         color: $textColorLight;
-        max-width: 70%;
+        max-width: 50%;
         margin: 0 auto;
     
     }
     .indiv-release-date {
+        font-family: $bodyFont;
+        font-size: $mobileBodyTextSize;
+        color: $textColorLight;
+        text-align: center;
+    
+    }
+    .indiv-language {
         font-family: $bodyFont;
         font-size: $mobileBodyTextSize;
         color: $textColorLight;
