@@ -23,10 +23,6 @@
     background-color: $hover;
 }
 
-// .filter-btns li:hover {
-//     background-color: $hover;
-// }
-
 ul {
     padding-inline-start: 0;
 }
@@ -43,4 +39,14 @@ li {
 .filter:active {
     background-color: $textColorLight;
 }
+
+.navSort {
+    width: 288px;
+
+    @media(min-width: 599px) {
+        width: 520px;
+    } 
+}
+
+
 
