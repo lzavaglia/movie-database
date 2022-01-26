@@ -8,13 +8,11 @@ import {isMovieInStorage, setStorage, removeFromStorage} from '../utilities/Stor
 import filledHeart from '../images/filled-heart.svg';
 import heart from '../images/heart.svg';
 
+
 const dateFormat = (string) => {
   let options = {year: 'numeric', month: 'long', day: 'numeric' };
   return new Date(string).toLocaleDateString([],options);
 }
-
-
-
 
 function timeConvert(n) {
   var num = n;
@@ -44,6 +42,8 @@ function IndividualMovieCard({ movie, updateFavs }) {
           updateFavs(updatedFavMovies);
       }
   }
+
+
 
   if (!movie) {
     return null;
@@ -77,6 +77,7 @@ function IndividualMovieCard({ movie, updateFavs }) {
                 <div>
                     <img src={heart} alt='add to favs' onClick= {() => addMovie(movie)}/>
                 </div>}
+                
                 
                             {movie.genres.length === 0  ?
                                 <p className="no-genre">N/A</p>

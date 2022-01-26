@@ -6,10 +6,20 @@ import heart from '../images/heart.svg';
 import noPoster from '../images/no-movie-poster.jpg';
 import {isMovieInStorage, setStorage, removeFromStorage} from '../utilities/StorageFavourites';
 
+
 const dateFormat = (string) => {
     let options = {year: 'numeric', month: 'long', day: 'numeric' };
     return new Date(string).toLocaleDateString([],options);
 }
+
+function timeConvert(n) {
+    var num = n;
+    var hours = (num / 60);
+    var rhours = Math.floor(hours);
+    var minutes = (hours - rhours) * 60;
+    var rminutes = Math.round(minutes);
+    return rhours + "h " + rminutes + "m";
+    }
 
 function MovieCard({ movie, updateFavs }) {
     const [isLiked, setIsLiked] = useState(isMovieInStorage(movie));
@@ -36,7 +46,10 @@ function MovieCard({ movie, updateFavs }) {
         <div className='poster-container'>
         <div className='hover-container'><p>{movie.overview}</p><div className="button-container">
                                 <Link to={`/movie/${movie.id}`}><button className="movie-button">More Info</button></Link>
-                            </div></div>
+                            </div>
+            <p className="">Runtime: {timeConvert(movie.runtime)}</p>
+            <p className="">{movie.vote_average *10}%</p>
+                            </div>
         <div className='hover-info-display'></div>
         {movie.poster_path === null ?
                     <img src={noPoster} alt="No Poster" />:
@@ -52,10 +65,10 @@ function MovieCard({ movie, updateFavs }) {
                 <p className='movie-date'>{dateFormat(movie.release_date)}</p> 
 
                {isLiked === true ? <div>
-                    <img src={filledHeart} alt='remove from favs' onClick= {() => removeMovie(movie)}/>
+                    <img className="heart" src={filledHeart} alt='remove from favs' onClick= {() => removeMovie(movie)}/>
                 </div> :
                 <div>
-                    <img src={heart} alt='add to favs' onClick= {() => addMovie(movie)}/>
+                    <img className="heart" src={heart} alt='add to favs' onClick= {() => addMovie(movie)}/>
                 </div>}
 
             </div>
