@@ -134,9 +134,23 @@ img.mass-poster {
 //     height: 50vh;
 // }
 
-// .favourites-title {
-//     font-size: $titleFontSize;
-//     border-bottom: 2px solid $accentColor;
-//     width: 50%;
-//     margin-left: 5rem;
-// }
+.favourites-title {
+    font-size: $titleFontSize;
+    border-bottom: 4px solid $accentColor;
+}
+
+.favourites-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: $pageMarginMobile;    
+}
+
+.favourites-page p {
+    width: 500px;
+}
+
+.favourites-main {
+    display: flex;
+    justify-content: center;
+}
