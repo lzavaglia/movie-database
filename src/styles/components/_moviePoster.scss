@@ -13,6 +13,10 @@ p {
     text-align: center;
 }
 
+p.movie-title {
+    text-align: left;
+}
+
 .info-image-container {
     max-width: 230px;
     margin: 0 auto;
@@ -62,7 +66,8 @@ p {
     text-overflow: ellipsis;
     overflow: hidden;
     -webkit-line-clamp: 7;
-    -webkit-box-orient: vertical; 
+    -webkit-box-orient: vertical;
+    text-align: left;
 }
 
 
@@ -88,7 +93,6 @@ img.mass-poster {
     .movie-container {
         display: flex;
         flex-wrap: wrap;
-        z-index: -1000;
         
     }
     img.mass-poster {
@@ -139,4 +143,27 @@ img.mass-poster {
 
 .movie-button:hover {
     background-color: $hover;
+.favourites-title {
+    font-size: $mobileTitleFontSize;
+    border-bottom: 4px solid $accentColor;
+    margin-bottom: 4rem;
+}
+}
+
+.favourites-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: $pageMarginMobile;
+}
+
+// @media (min-width: 564px) {
+//     .no-favs {
+//         width: 500px;
+//     }
+// }
+
+.favourites-main {
+    display: flex;
+    justify-content: center;
 }

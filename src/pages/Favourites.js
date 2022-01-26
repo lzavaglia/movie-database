@@ -14,11 +14,13 @@ function Favourites() {
 
 
     return (
-        <section className='home-page'>
-            {/* <p className="favourites-title">Your Favourites</p> */}
+        <main className="favourites-main">
+            <section className='favourites-page'>
+                <h2 className="favourites-title">Your Favourites</h2>
 
-            {favMovies.length > 0 ? <Movies movies={favMovies} updateFavs={updateFavs} /> : <p className="noFavs">No movies have been added to your favourites. Please click on the heart icon in order to save your favourite movies here.</p>}
-        </section>
+                {favMovies.length > 0 ? <Movies movies={favMovies} updateFavs={updateFavs} /> : <p className="noFavs">No movies have been added to your favourites. Please click on the heart icon in order to save your favourite movies here.</p>}
+            </section>
+        </main>
     )
 }
 
