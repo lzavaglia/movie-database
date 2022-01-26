@@ -47,7 +47,7 @@ function MovieCard({ movie, updateFavs }) {
         <div className='hover-container'><p>{movie.overview}</p><div className="button-container">
                                 <Link to={`/movie/${movie.id}`}><button className="movie-button">More Info</button></Link>
                             </div>
-            <p className="">Runtime: {timeConvert(movie.runtime)}</p>
+            {/* <p className="">Runtime: {timeConvert(movie.runtime)}</p> */}
             <p className="">{movie.vote_average *10}%</p>
                             </div>
         <div className='hover-info-display'></div>
