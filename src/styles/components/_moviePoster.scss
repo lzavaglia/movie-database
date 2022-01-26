@@ -91,7 +91,6 @@ img.mass-poster {
     .movie-container {
         display: flex;
         flex-wrap: wrap;
-        z-index: -1000;
         
     }
     img.mass-poster {
@@ -123,31 +122,24 @@ img.mass-poster {
     }
 }
 
-// .noFavs{
-//     font-size: 2rem;
-//     // text-align: center;
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     width: 70%;
-//     margin: 0 auto;
-//     height: 50vh;
-// }
-
 .favourites-title {
-    font-size: $titleFontSize;
+    font-size: $mobileTitleFontSize;
     border-bottom: 4px solid $accentColor;
+    margin-bottom: 4rem;
 }
 
 .favourites-page {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: $pageMarginMobile;    
+    margin: $pageMarginMobile;
+    height: 60vh;   
 }
 
-.favourites-page p {
-    width: 500px;
+@media (min-width: 564px) {
+    .favourites-page p {
+        width: 500px;
+    }
 }
 
 .favourites-main {
