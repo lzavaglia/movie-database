@@ -25,13 +25,16 @@
 }
 
 .indiv-heart {
-  padding-top: 30px;
+  padding-top: 10px;
   padding-left: 30px;
   display: block;
 }
 
 .indiv-title-and-heart {
   display: flex;
+  align-items: center;
+  justify-content: center;
+
 }
 
 .indiv-movie-descrip {
@@ -149,7 +152,7 @@
   //whole container
   .indiv-poster-container {
     display: grid;
-    grid-template-rows: 550px 1fr 1px;
+    grid-template-rows: 1px 100px 1fr 1fr 1px;
     grid-template-columns: 450px 1fr;
   }
   // movie poster, left side span both rows
@@ -165,13 +168,13 @@
   // genre, legnth etc. needs to span across the bottom
   .indiv-details {
     grid-column: 2/3;
-    grid-row: 2/3;
+    grid-row: 4/5;
     max-width: 80%;
   }
   // description paragraph, right side below title
   .indiv-movie-descrip {
     font-size: $bodyFontSize;
-    padding-top: 200px;
+    padding-top: 100px;
     max-width: 75%;
     margin: 0 auto;
     grid-row: 1/2;
@@ -180,17 +183,16 @@
   // movie title, right side above description paragraph
   .indiv-movie-title {
     font-size: $headerFontSize;
-    grid-row: 1/2;
+    grid-row: 1;
     grid-column: 2/3;
   }
 
   .indiv-heart{
-      padding-top: 30px;
+      padding-top: 10px;
       padding-left: 30px;
   }
 
 //   .indiv-title-and-heart{
-//     display: grid;
 //   }
 
   .indiv-movie-rating {
