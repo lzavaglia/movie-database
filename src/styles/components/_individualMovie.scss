@@ -21,7 +21,8 @@
   font-size: $hamburgerTextSize;
   color: $textColorLight;
   text-align: center;
-  margin: 15px 0 15px 0;
+  margin: 25px 0 15px 0;
+  line-height: 60px;
 }
 
 .indiv-heart {
@@ -34,7 +35,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-
 }
 
 .indiv-movie-descrip {
@@ -174,7 +174,7 @@
   // description paragraph, right side below title
   .indiv-movie-descrip {
     font-size: $bodyFontSize;
-    padding-top: 100px;
+    padding-top: 175px;
     max-width: 75%;
     margin: 0 auto;
     grid-row: 1/2;
@@ -187,13 +187,13 @@
     grid-column: 2/3;
   }
 
-  .indiv-heart{
-      padding-top: 10px;
-      padding-left: 30px;
+  .indiv-heart {
+    padding-top: 10px;
+    padding-left: 30px;
   }
 
-//   .indiv-title-and-heart{
-//   }
+  //   .indiv-title-and-heart{
+  //   }
 
   .indiv-movie-rating {
     font-size: $bodyFontSize;
@@ -216,6 +216,9 @@
     font-size: $bodyFontSize;
   }
   .hLineShort.indivline1 {
-    display: none;
+    grid-row: 1/2;
+    grid-column: 2/3;
+    margin-top: 150px;
+    width: 90%;
   }
 }
