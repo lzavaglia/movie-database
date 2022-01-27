@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const Nav = ({ handleShowHideNav }) => {
     
     function closeNav(e){
-        if(window.innerWidth < 600){
+        if(window.innerWidth){
             handleShowHideNav();
         }else{
             e.target.blur();
