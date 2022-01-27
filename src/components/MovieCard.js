@@ -57,7 +57,6 @@ function MovieCard({ movie, updateFavs }) {
                 }
             <div className='all-movie-info-box'>
             <div className='title-date-container'>
-            <p className='movie-title'>{movie.title}</p>
             <div className='date-heart-container'>
             <p className='movie-date'>{dateFormat(movie.release_date)}</p> 
             {isLiked === true ? <div>
@@ -67,6 +66,8 @@ function MovieCard({ movie, updateFavs }) {
                     <img className="heart" src={heart} alt='add to favs' onClick= {() => addMovie(movie)}/>
                 </div>}
             </div>
+            <p className='movie-title'>{movie.title}</p>
+            
             
             </div>
                
