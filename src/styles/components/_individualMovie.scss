@@ -156,7 +156,7 @@
   //whole container
   .indiv-poster-container {
     display: grid;
-    grid-template-rows: 1px 100px 1fr 1fr 1px;
+    grid-template-rows: 1px 100px 1fr 200px;
     grid-template-columns: 450px 1fr;
   }
   // movie poster, left side span both rows
