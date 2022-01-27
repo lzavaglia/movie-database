@@ -157,7 +157,7 @@
   .indiv-poster-container {
     display: grid;
     grid-template-rows: 1px 100px 1fr 200px;
-    grid-template-columns: 450px 1fr;
+    grid-template-columns: 450px 550px;
   }
   // movie poster, left side span both rows
   img.indiv-mass-poster {
@@ -200,7 +200,7 @@
   }
 
   .indiv-heart {
-    padding-top: 10px;
+    padding-top: 40px;
     padding-left: 30px;
   }
 
