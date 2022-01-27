@@ -10,11 +10,13 @@ p {
     font-family: $bodyFont;
     font-size: 16px;
     font-weight: lighter;
-    text-align: center;
+    // text-align: center;
+    margin: 0;
 }
 
 p.movie-title {
     text-align: left;
+    margin-top: 20px;
 }
 
 .info-image-container {
@@ -50,6 +52,10 @@ p.movie-title {
 
 }
 
+// .all-info-movie-box {
+//     max-height: 30px;
+// }
+
 
 .hover-container:hover {
     opacity: 100%;
@@ -78,10 +84,10 @@ img.mass-poster {
     z-index: -10;
 }
 
-.title-icon-container {
-    display: flex;
-    justify-content: space-between;
-}
+// // .title-icon-container {
+// //     display: flex;
+// //     justify-content: space-between;
+// }
 
 @media (min-width: 520px) {
     .poster-container {
@@ -101,9 +107,9 @@ img.mass-poster {
         z-index: -15;
     }
 
-    .movie-date {
-        margin-left: 19px;
-    }
+    // .movie-date {
+    //     margin-left: 19px;
+    // }
 
     .heart {
         margin-right: 16px;
