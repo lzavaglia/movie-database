@@ -70,7 +70,6 @@ img.mass-poster {
 
 .all-movie-info-box {
     height: 115px;
-    // background-color: blue;
     width:100%;
 }
 
@@ -93,7 +92,7 @@ img.mass-poster {
 }
 
 .movie-title {
-    margin-top: 6px;
+    margin-right: 5px;
 }
 
 @media (min-width: 520px) {
@@ -140,7 +139,7 @@ img.mass-poster {
 }
 
 .movie-button:hover {
-    background-color: $hover;
+background-color: $hover;
 .favourites-title {
     font-size: $mobileTitleFontSize;
     border-bottom: 4px solid $accentColor;
@@ -152,7 +151,7 @@ img.mass-poster {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: $pageMarginMobile;
+    margin: 0 1rem;
 }
 
 
