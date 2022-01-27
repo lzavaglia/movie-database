@@ -56,22 +56,20 @@ function MovieCard({ movie, updateFavs }) {
                     <Link to={`/movie/${movie.id}`}><img className='mass-poster' src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} alt={movie.title} /></Link>
                 }
             <div className='all-movie-info-box'>
-            <p className='title-icon-container'></p>
-            
+            <div className='title-date-container'>
+            <div className='title-heart-container'>
             <p className='movie-title'>{movie.title}</p>
-           
-            
-            {/* <div className='movie-info-container'> */}
-
-            <p className='movie-date'>{dateFormat(movie.release_date)}</p> 
-            
-               {isLiked === true ? <div>
+            {isLiked === true ? <div>
                     <img className="heart" src={filledHeart} alt='remove from favs' onClick= {() => removeMovie(movie)}/>
                 </div> :
                 <div>
                     <img className="heart" src={heart} alt='add to favs' onClick= {() => addMovie(movie)}/>
                 </div>}
-            {/* </div> */}
+            </div>
+            <p className='movie-date'>{dateFormat(movie.release_date)}</p> 
+            </div>
+               
+
                 </div>
             </div>
         

@@ -14,10 +14,6 @@ p {
     margin: 0;
 }
 
-p.movie-title {
-    text-align: left;
-    margin-top: 20px;
-}
 
 .info-image-container {
     max-width: 230px;
@@ -36,7 +32,6 @@ p.movie-title {
 
 .hover-container {
     z-index: 10;
-    // border: 2px solid $accentColor;
     padding: .5rem;
     position: absolute;
     width: 220px;
@@ -52,19 +47,9 @@ p.movie-title {
 
 }
 
-// .all-info-movie-box {
-//     max-height: 30px;
-// }
-
-
 .hover-container:hover {
     opacity: 100%;
     background-color: rgba(0, 0, 0, 0.801);
-
-    // @media (min-width: 520px) {
-    //     z-index: 2000;
-    //     opacity: 100%;
-    // }
 }
 
 .hover-container p {
@@ -76,7 +61,6 @@ p.movie-title {
     text-align: left;
 }
 
-
 img.mass-poster {
     border: 3px solid $accentColor;
     width: 100%;
@@ -84,10 +68,33 @@ img.mass-poster {
     z-index: -10;
 }
 
-// // .title-icon-container {
-// //     display: flex;
-// //     justify-content: space-between;
-// }
+.all-movie-info-box {
+    height: 115px;
+    // background-color: blue;
+    width:100%;
+}
+
+.title-date-container {
+    display:grid;
+    height: 100%;
+    grid-template-rows: 1fr 1fr;
+    gap: 1rem;
+}
+
+.title-heart-container {
+    display: flex;
+    justify-content: space-between;
+    align-self: inherit;
+    margin-top: 10px;
+}
+
+.movie-date {
+    align-self: center;
+}
+
+.movie-title {
+    margin-right: 5px;
+}
 
 @media (min-width: 520px) {
     .poster-container {
@@ -105,21 +112,6 @@ img.mass-poster {
         width: 100%;
         position: relative;
         z-index: -15;
-    }
-
-    // .movie-date {
-    //     margin-left: 19px;
-    // }
-
-    .heart {
-        margin-right: 16px;
-    }
-    .movie-rating {
-        margin-right: 24px;
-    }
-
-    .heart {
-        margin-right: 16px;
     }
     
 }
@@ -163,11 +155,6 @@ img.mass-poster {
     margin: $pageMarginMobile;
 }
 
-// @media (min-width: 564px) {
-//     .no-favs {
-//         width: 500px;
-//     }
-// }
 
 .favourites-main {
     display: flex;
