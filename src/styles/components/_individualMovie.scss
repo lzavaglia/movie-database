@@ -46,44 +46,10 @@ p {
 }
 
 .indiv-movie-descrip {
-  // font-family: $bodyFont;
-  // font-size: $mobileBodyTextSize;
-  // color: $textColorLight;
   max-width: 75%;
   margin: 0 auto;
   text-align: left;
 }
-
-// .indiv-release-date {
-//   font-family: $bodyFont;
-//   font-size: $mobileBodyTextSize;
-//   color: $textColorLight;
-//   text-align: center;
-// }
-// .indiv-language {
-//   font-family: $bodyFont;
-//   font-size: $mobileBodyTextSize;
-//   color: $textColorLight;
-//   text-align: center;
-// }
-// .indiv-run-time {
-//   font-family: $bodyFont;
-//   font-size: $mobileBodyTextSize;
-//   color: $textColorLight;
-//   text-align: center;
-// }
-// .indiv-view-rating {
-//   font-family: $bodyFont;
-//   font-size: $mobileBodyTextSize;
-//   color: $textColorLight;
-//   text-align: center;
-// }
-// .indiv-movie-genre {
-//   font-family: $bodyFont;
-//   font-size: $mobileBodyTextSize;
-//   color: $textColorLight;
-//   text-align: center;
-// }
 
 .hLineShort.indivline1 {
   width: 75%;
@@ -100,7 +66,6 @@ p {
     max-height: 405px;
     margin-left: auto;
     margin-right: auto;
-    // display: block;
   }
 
   .indiv-movie-title {
@@ -115,54 +80,10 @@ p {
     color: $textColorLight;
   }
 
-  // .indiv-movie-rating {
-  //   font-family: $headerFont;
-  //   font-size: $mobileTitleFontSize;
-  //   color: $textColorLight;
-  // }
-
-  // .indiv-language {
-  //   font-family: $headerFont;
-  //   font-size: $mobileTitleFontSize;
-  //   color: $textColorLight;
-  // }
-
   .indiv-movie-descrip {
-    // font-family: $bodyFont;
-    // font-size: $mobileBodyTextSize;
-    // color: $textColorLight;
     max-width: 75%;
   }
-  // .indiv-release-date {
-  //   // font-family: $bodyFont;
-  //   // font-size: $mobileBodyTextSize;
-  //   // color: $textColorLight;
-  //   // text-align: center;
-  // }
-  // .indiv-language {
-  //   // font-family: $bodyFont;
-  //   // font-size: $mobileBodyTextSize;
-  //   // color: $textColorLight;
-  //   text-align: center;
-  // }
-  // .indiv-run-time {
-  //   // font-family: $bodyFont;
-  //   // font-size: $mobileBodyTextSize;
-  //   // color: $textColorLight;
-  //   text-align: center;
-  // }
-  // .indiv-view-rating {
-  //   // font-family: $bodyFont;
-  //   // font-size: $mobileBodyTextSize;
-  //   // color: $textColorLight;
-  //   text-align: center;
-  // }
-  // .indiv-movie-genre {
-  //   // font-family: $bodyFont;
-  //   // font-size: $mobileBodyTextSize;
-  //   // color: $textColorLight;
-  //   text-align: center;
-  // }
+
 }
 
 @media (min-width: 1000px) {
@@ -176,12 +97,8 @@ p {
   img.indiv-mass-poster {
     max-width: 300px;
     max-height: 450px;
-    // margin-left: auto;
-    // margin-right: auto;
-    // display: block;
     grid-column: 1/2;
     grid-row: 1/2;
-    // max-width: 100%;
     margin: 0 50px 0 0;
     justify-self: end;
   }
@@ -237,26 +154,19 @@ p {
   p {
     font-size: $bodyFontSize;
   }
-
   .indiv-release-date {
-    font-size: $bodyFontSize;
     text-align: left;
   }
   .indiv-run-time {
-    font-size: $bodyFontSize;
     text-align: left;
   }
-
   .indiv-view-rating {
-    font-size: $bodyFontSize;
     text-align: left;
   }
   .indiv-language {
-    font-size: $bodyFontSize;
     text-align: left;
   }
   .indiv-movie-genre {
-    font-size: $bodyFontSize;
     text-align: left;
   }
   .hLineShort.indivline1 {
@@ -278,5 +188,6 @@ p {
     width: 90%;
     margin: 0 0 0 0;
     align-self: end;
+    display: revert;
   }
 }
