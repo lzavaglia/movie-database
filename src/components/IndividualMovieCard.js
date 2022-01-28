@@ -6,7 +6,6 @@ import {isMovieInStorage, setStorage, removeFromStorage} from "../utilities/Stor
 import filledHeart from "../images/filled-heart.svg";
 import heart from "../images/heart.svg";
 
-
 const dateFormat = (string) => {
   let options = { year: "numeric", month: "long", day: "numeric" };
   return new Date(string).toLocaleDateString([], options);
@@ -40,8 +39,6 @@ function IndividualMovieCard({ movie, updateFavs }) {
     }
   };
 
-
-
   if (!movie) {
     return null;
   } else {
@@ -57,7 +54,7 @@ function IndividualMovieCard({ movie, updateFavs }) {
               alt={movie.title}
             />
           )}
-
+          <div>
           <div className="indiv-title-and-heart">
             <p className="indiv-movie-title">{movie.title}</p>
             <div className="indiv-heart">
@@ -84,9 +81,11 @@ function IndividualMovieCard({ movie, updateFavs }) {
 
           <div className="hLineShort indivline1"></div>
 
-          <p className="indiv-movie-descrip">{movie.overview}</p>
+            <p className="indiv-movie-descrip">{movie.overview}</p>
+            <div className="hLineShort indivline2"></div>
+          </div>
 
-          <div className="indiv-movie-info-container indiv-details">
+          <div className="indiv-movie-info-container indiv-details-1">
             <div className="details-info">
               {movie.genres.length === 0 ? (
                 <p className="no-genre">N/A</p>
@@ -99,11 +98,14 @@ function IndividualMovieCard({ movie, updateFavs }) {
                 </p>
               )}
             </div>
-            <p className="indiv-release-date">
-              Release Date: {dateFormat(movie.release_date)}
-            </p>
             <p className="indiv-language">
               Original Language: {movie.original_language}
+            </p>
+          </div>
+
+          <div className="indiv-details-2">
+            <p className="indiv-release-date">
+              Release Date: {dateFormat(movie.release_date)}
             </p>
             <p className="indiv-run-time">
               Runtime: {timeConvert(movie.runtime)}
