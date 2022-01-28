@@ -57,29 +57,21 @@ function IndividualMovieCard({ movie, updateFavs }) {
           <div>
           <div className="indiv-title-and-heart">
             <p className="indiv-movie-title">{movie.title}</p>
-            <div className="indiv-heart">
-              {isLiked === true ? 
-              
-                <div>
-                  <img
-                    src={filledHeart}
-                    alt="remove from favs"
-                    onClick={() => removeMovie(movie)}
-                  />
-                </div>
-                 : 
-                <div>
-                  <img
-                    src={heart}
-                    alt="add to favs"
-                    onClick={() => addMovie(movie)}
-                  />
-                </div>
-                }
-              </div>
-          </div>
-
-          <div className="hLineShort indivline1"></div>
+            {isLiked === true ? (
+              <img
+                src={filledHeart}
+                alt="remove from favs"
+                onClick={() => removeMovie(movie)}
+              />
+            ) : (
+              <img
+                src={heart}
+                alt="add to favs"
+                onClick={() => addMovie(movie)}
+              />
+            )}
+            </div>
+            <div className="hLineShort indivline1"></div>
 
             <p className="indiv-movie-descrip">{movie.overview}</p>
             <div className="hLineShort indivline2"></div>

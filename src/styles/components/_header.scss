@@ -11,6 +11,7 @@ header {
     // padding: 4rem 0.5rem 0 0.5rem;
     max-width: 1600px;
     margin: 0 auto;
+    padding-bottom: 50px;
     
 
     a {
@@ -45,7 +46,7 @@ header {
     }
 
     @media (min-width : 382px) {
-        padding: 0 1rem;
+        padding: 0 1rem 50px 1rem;
     }
 
     @media (min-width: 800px){

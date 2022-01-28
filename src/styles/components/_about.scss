@@ -14,12 +14,6 @@
     margin-top: 0;
 }
 
-.hLineShort {
-    height: 0.2rem;
-    width: 130px;
-    background-color: $accentColor;
-    margin-bottom: 50px;
-}
 
 .about-welcome {
     font-family: $headerFont;
@@ -51,12 +45,14 @@
         font-size: $headerFontSize;
         color: $textColorLight;
         text-align: center;
+        margin: 0;
     }
     .about-text {
         max-width: 675px;
         font-size: $bodyFontSize;
-        text-align: center;
+        text-align: left;
         margin: 0 auto;
+        margin-top: 60px;
         margin-bottom: 60px;
     }
     .about-us {
@@ -64,7 +60,5 @@
         text-align: left;
         margin-left: 10px;
     }
-    .hLineShort {
-        width: 320px;
-    }
+
 }

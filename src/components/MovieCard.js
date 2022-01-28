@@ -48,29 +48,32 @@ function MovieCard({ movie, updateFavs }) {
                                 <Link to={`/movie/${movie.id}`}><button className="movie-button">More Info</button></Link>
                             </div>
             {/* <p className="">Runtime: {timeConvert(movie.runtime)}</p> */}
-            <p className="">{movie.vote_average *10}%</p>
-                            </div>
+            {/* <p className="">{movie.vote_average *10}%</p> */}
+        </div>
         <div className='hover-info-display'></div>
         {movie.poster_path === null ?
                     <img src={noPoster} alt="No Poster" />:
                     <Link to={`/movie/${movie.id}`}><img className='mass-poster' src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} alt={movie.title} /></Link>
                 }
-        
-            <div className='title-icon-container'>
+            <div className='all-movie-info-box'>
+            <div className='title-date-container'>
+            <div className='date-heart-container'>
             <p className='movie-title'>{movie.title}</p>
-            </div>
-            </div>
-            <div className='movie-info-container'>
-
-                <p className='movie-date'>{dateFormat(movie.release_date)}</p> 
-
-               {isLiked === true ? <div>
+            {/* <p className='movie-date'>{dateFormat(movie.release_date)}</p>  */}
+            {isLiked === true ? <div>
                     <img className="heart" src={filledHeart} alt='remove from favs' onClick= {() => removeMovie(movie)}/>
                 </div> :
                 <div>
                     <img className="heart" src={heart} alt='add to favs' onClick= {() => addMovie(movie)}/>
                 </div>}
+            </div>
+            
+            
+            
+            </div>
+               
 
+                </div>
             </div>
         
         
