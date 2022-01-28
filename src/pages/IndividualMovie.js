@@ -14,7 +14,6 @@ function IndividualMovie({ movie }) {
             let moviesDataFromApi = await res.json();
             // moviesDataFromApi = moviesDataFromApi;
             setMoviesData(moviesDataFromApi);
-            console.log(moviesDataFromApi);
         }
         fetchMovie();
     }, []);
