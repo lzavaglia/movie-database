@@ -4,11 +4,7 @@ import moviePoster from "../images/massImg.png";
 import "../styles/components/_moviePoster.scss";
 import "../styles/components/_individualMovie.scss";
 import noPoster from "../images/no-movie-poster.jpg";
-import {
-  isMovieInStorage,
-  setStorage,
-  removeFromStorage,
-} from "../utilities/StorageFavourites";
+import {isMovieInStorage, setStorage, removeFromStorage} from "../utilities/StorageFavourites";
 import filledHeart from "../images/filled-heart.svg";
 import heart from "../images/heart.svg";
 
@@ -67,7 +63,9 @@ function IndividualMovieCard({ movie, updateFavs }) {
           <div className="indiv-title-and-heart">
             <p className="indiv-movie-title">{movie.title}</p>
             <div className="indiv-heart">
+            {console.log(isLiked)}
               {isLiked === true ? 
+              
                 <div>
                   <img
                     src={filledHeart}

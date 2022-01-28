@@ -21,7 +21,7 @@ function IndividualMovie({ movie }) {
 
     return (
         <section className='individual-page'>
-            <IndividualMovieCard movie = {moviesData}/>
+           {moviesData !== false && <IndividualMovieCard movie = {moviesData}/>}
         </section>
     )
 }
