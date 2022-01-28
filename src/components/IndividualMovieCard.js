@@ -1,6 +1,4 @@
-import { Link } from "react-router-dom";
 import { useState } from "react";
-import moviePoster from "../images/massImg.png";
 import "../styles/components/_moviePoster.scss";
 import "../styles/components/_individualMovie.scss";
 import noPoster from "../images/no-movie-poster.jpg";

@@ -1,6 +1,5 @@
 import IndividualMovieCard from "../components/IndividualMovieCard";
 import {useState, useEffect} from 'react';
-import Movies from '../components/Movies';
 import { API_KEY } from "../globals/Variables";
 import { useParams } from "react-router-dom";
 
