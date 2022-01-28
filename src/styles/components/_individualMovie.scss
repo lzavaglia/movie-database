@@ -30,6 +30,7 @@
 }
 .indiv-title-and-heart img {
   padding-left: 20px;
+  padding-top: 10px;
 }
 .indiv-title-and-heart {
   display: flex;
@@ -112,8 +113,7 @@ p {
   }
   // description paragraph, right side below title
   .indiv-movie-descrip {
-    font-size: $bodyFontSize;
-    // padding-top: 175px;
+    font-size: $indivBody;
     max-width: 80%;
     margin: 0;
     grid-row: 2/3;
@@ -135,8 +135,11 @@ p {
     text-align: left;
     display: inline;
   }
+  .indiv-title-and-heart {
+    display: revert;
+  }
   p {
-    font-size: $bodyFontSize;
+    font-size: $indivBody;
   }
   .indiv-release-date {
     text-align: left;
