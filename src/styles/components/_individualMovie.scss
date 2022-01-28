@@ -3,16 +3,7 @@
 .indiv-poster-container {
   margin-bottom: 0;
 }
-.indiv-details-1 {
-  max-width: 50%;
-  margin: 0 auto;
-  padding-top: 10px;
-}
-.indiv-details-2 {
-  max-width: 50%;
-  margin: 0 auto;
-  padding-bottom: 10px;
-}
+
 .indiv-mass-poster {
   max-width: 270px;
   margin-left: auto;
@@ -27,6 +18,7 @@
   text-align: center;
   margin: 25px 0 15px 0;
   line-height: 60px;
+  padding-left: 13%;
 }
 .indiv-title-and-heart img {
   padding-left: 20px;
@@ -35,18 +27,28 @@
 .indiv-title-and-heart {
   display: flex;
   align-items: center;
-  justify-content: center;
+  // justify-content: center;
 }
 p {
   font-family: $bodyFont;
   font-size: $mobileBodyTextSize;
   color: $textColorLight;
-  text-align: center;
+  // margin: 0 auto;
 }
 .indiv-movie-descrip {
   max-width: 75%;
   margin: 0 auto;
   text-align: left;
+}
+.indiv-details-1 {
+  max-width: 75%;
+  margin: 0 auto;
+  padding-top: 10px;
+}
+.indiv-details-2 {
+  max-width: 75%;
+  margin: 0 auto;
+  padding-bottom: 10px;
 }
 .hLineShort.indivline1 {
   width: 75%;
