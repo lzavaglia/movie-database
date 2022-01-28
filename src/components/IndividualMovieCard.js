@@ -60,10 +60,9 @@ function IndividualMovieCard({ movie, updateFavs }) {
               alt={movie.title}
             />
           )}
-
+          <div>
           <div className="indiv-title-and-heart">
             <p className="indiv-movie-title">{movie.title}</p>
-
             {isLiked === true ? (
               <img
                 src={filledHeart}
@@ -77,6 +76,7 @@ function IndividualMovieCard({ movie, updateFavs }) {
                 onClick={() => addMovie(movie)}
               />
             )}
+            </div>
             <div className="hLineShort indivline1"></div>
 
             <p className="indiv-movie-descrip">{movie.overview}</p>

@@ -3,7 +3,6 @@
 .indiv-poster-container {
   margin-bottom: 0;
 }
-
 .indiv-details-1 {
   max-width: 50%;
   margin: 0 auto;
@@ -14,29 +13,28 @@
   margin: 0 auto;
   padding-bottom: 10px;
 }
-
 .indiv-mass-poster {
   max-width: 270px;
   margin-left: auto;
   margin-right: auto;
   display: block;
 }
-
 .indiv-movie-title {
   font-family: $headerFont;
-  font-size: $hamburgerTextSize;
+  font-size: $headerFontSize;
   font-weight: bold;
   color: $textColorLight;
   text-align: center;
   margin: 25px 0 15px 0;
   line-height: 60px;
-  display: inline;
 }
-
-.indiv-heart {
-  padding-top: 10px;
-  padding-left: 30px;
-  display: block;
+.indiv-title-and-heart img {
+  padding-left: 20px;
+}
+.indiv-title-and-heart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 p {
   font-family: $bodyFont;
@@ -44,13 +42,11 @@ p {
   color: $textColorLight;
   text-align: center;
 }
-
 .indiv-movie-descrip {
   max-width: 75%;
   margin: 0 auto;
   text-align: left;
 }
-
 .hLineShort.indivline1 {
   width: 75%;
   margin: 0 auto;
@@ -67,23 +63,17 @@ p {
     margin-left: auto;
     margin-right: auto;
   }
-
   .indiv-movie-title {
     font-family: $headerFont;
-    font-size: $hamburgerTextSize;
-    color: $textColorLight;
   }
-
   p {
     font-family: $bodyFont;
     font-size: $mobileBodyTextSize;
     color: $textColorLight;
   }
-
   .indiv-movie-descrip {
     max-width: 75%;
   }
-
 }
 
 @media (min-width: 1000px) {
@@ -145,12 +135,6 @@ p {
     text-align: left;
     display: inline;
   }
-
-  .indiv-title-and-heart img {
-    padding-left: 20px;
-    // padding-bottom: 5px;
-  }
-
   p {
     font-size: $bodyFontSize;
   }
