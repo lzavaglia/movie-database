@@ -12,7 +12,6 @@ import {
 import filledHeart from "../images/filled-heart.svg";
 import heart from "../images/heart.svg";
 
-
 const dateFormat = (string) => {
   let options = { year: "numeric", month: "long", day: "numeric" };
   return new Date(string).toLocaleDateString([], options);
@@ -46,8 +45,6 @@ function IndividualMovieCard({ movie, updateFavs }) {
     }
   };
 
-
-
   if (!movie) {
     return null;
   } else {
@@ -66,30 +63,25 @@ function IndividualMovieCard({ movie, updateFavs }) {
 
           <div className="indiv-title-and-heart">
             <p className="indiv-movie-title">{movie.title}</p>
-            <div className="indiv-heart">
-              {isLiked === true ? 
-                <div>
-                  <img
-                    src={filledHeart}
-                    alt="remove from favs"
-                    onClick={() => removeMovie(movie)}
-                  />
-                </div>
-                 : 
-                <div>
-                  <img
-                    src={heart}
-                    alt="add to favs"
-                    onClick={() => addMovie(movie)}
-                  />
-                </div>
-                }
-              </div>
+
+            {isLiked === true ? (
+              <img
+                src={filledHeart}
+                alt="remove from favs"
+                onClick={() => removeMovie(movie)}
+              />
+            ) : (
+              <img
+                src={heart}
+                alt="add to favs"
+                onClick={() => addMovie(movie)}
+              />
+            )}
+            <div className="hLineShort indivline1"></div>
+
+            <p className="indiv-movie-descrip">{movie.overview}</p>
+            <div className="hLineShort indivline2"></div>
           </div>
-
-          {/* <div className="hLineShort indivline1"></div> */}
-
-          <p className="indiv-movie-descrip">{movie.overview}</p>
 
           <div className="indiv-movie-info-container indiv-details-1">
             <div className="details-info">
@@ -107,9 +99,9 @@ function IndividualMovieCard({ movie, updateFavs }) {
             <p className="indiv-language">
               Original Language: {movie.original_language}
             </p>
-            </div>
+          </div>
 
-            <div className="indiv-details-2">
+          <div className="indiv-details-2">
             <p className="indiv-release-date">
               Release Date: {dateFormat(movie.release_date)}
             </p>
@@ -119,7 +111,7 @@ function IndividualMovieCard({ movie, updateFavs }) {
             <p className="indiv-view-rating">
               Rating: {movie.vote_average * 10}%
             </p>
-            </div>
+          </div>
         </div>
       </>
     );
