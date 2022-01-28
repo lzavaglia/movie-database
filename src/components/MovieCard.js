@@ -19,17 +19,17 @@ function timeConvert(n) {
     var minutes = (hours - rhours) * 60;
     var rminutes = Math.round(minutes);
     return rhours + "h " + rminutes + "m";
-    }
+}
 
 function MovieCard({ movie, updateFavs }) {
     const [isLiked, setIsLiked] = useState(isMovieInStorage(movie));
 
     const addMovie = () => {
-            const updatedFavMovies = setStorage(movie);
-            setIsLiked(true);
-            if(updateFavs !== undefined){
-                updateFavs(updatedFavMovies);
-            }
+        const updatedFavMovies = setStorage(movie);
+        setIsLiked(true);
+        if(updateFavs !== undefined){
+            updateFavs(updatedFavMovies);
+        }
     }
 
     const removeMovie = () => {
