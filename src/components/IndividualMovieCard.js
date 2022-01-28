@@ -63,7 +63,6 @@ function IndividualMovieCard({ movie, updateFavs }) {
           <div className="indiv-title-and-heart">
             <p className="indiv-movie-title">{movie.title}</p>
             <div className="indiv-heart">
-            {console.log(isLiked)}
               {isLiked === true ? 
               
                 <div>
