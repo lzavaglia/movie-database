@@ -1,0 +1,25 @@
+@use '../default/universalStyles' as *;
+
+
+div.fLine {
+    height: 1px;
+    width: 67%;
+    background-color: $accentColor;
+    margin-bottom: 3rem;
+    bottom: 0rem;
+    order: 10000;
+
+    @media(min-width: 537px) {
+        width: 47%;
+    }
+
+    @media(min-width: 740px) {
+        width: 31%;
+    }
+}
+
+
+h2.favourites-title {
+    font-size: $mobileTitleFontSize;
+    margin-bottom: 2px;
+}
