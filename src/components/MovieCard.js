@@ -40,6 +40,9 @@ function MovieCard({ movie, updateFavs }) {
         }
     }
     
+    const [mobileMoreInfo, setMobileMoreInfo] = useState(false);
+
+    
 
     return (
         <div className='info-image-container'>
@@ -60,12 +63,12 @@ function MovieCard({ movie, updateFavs }) {
             <div className='date-heart-container'>
             <p className='movie-title'>{movie.title}</p>
             {/* <p className='movie-date'>{dateFormat(movie.release_date)}</p>  */}
-            {isLiked === true ? <div>
+            {isLiked === true ? <span className='heart-span-home'>
                     <img className="heart" src={filledHeart} alt='remove from favs' onClick= {() => removeMovie(movie)}/>
-                </div> :
-                <div>
+                </span> :
+                <span className='heart-span-home'>
                     <img className="heart" src={heart} alt='add to favs' onClick= {() => addMovie(movie)}/>
-                </div>}
+                </span>}
             </div>
             
             
