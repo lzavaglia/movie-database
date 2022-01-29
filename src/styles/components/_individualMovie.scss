@@ -10,23 +10,10 @@ margin: 0 auto;
 display: block;
 }
 
-// .indiv-mass-poster {
-//   max-width: 270px;
-//   margin-left: auto;
-//   margin-right: auto;
-//   display: block;
-// }
-// .indiv-movie-title {
-//   font-family: $headerFont;
-//   font-size: $headerFontSize;
-//   font-weight: bold;
-//   color: $textColorLight;
-//   text-align: center;
-//   margin: 25px 0 15px 0;
-//   line-height: 60px;
-//   padding-left: 13%;
-// }
-
+.indiv-details-2 {
+  margin: 0 auto;
+  width: 80%;
+}
 
 .indiv-movie-title {
     font-family: 'salden';
@@ -132,25 +119,31 @@ p {
     max-width: 80%;
     text-align: left;
     align-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  
   }
   // description paragraph, right side below title
   .indiv-movie-descrip {
-    max-width: 80%;
+    max-width: 100%;
     grid-row: 2/3;
     grid-column: 2/3;
     padding-top: 40px;
     padding-bottom: 40px;
     justify-self: start;
-    
+    margin: 0;
+    border-top: 2px solid $accentColor;
     
   }
 
   .descrip-data-title {
     border-bottom: 2px solid $accentColor;
-    display: flex;
-    justify-content: center;
+    // display: flex;
+    // justify-content: center;
     align-items: center;
     flex-direction: column;
+    max-width: 90%;
   }
 
   // movie title, right side above description paragraph
@@ -166,10 +159,11 @@ p {
     text-align: left;
     display: inline;
     line-height: 0;
-    border-bottom: 2px solid $accentColor;
   }
   .indiv-title-and-heart {
     display: revert;
+    margin: 0;
+    padding-bottom: 1rem;
   }
 
   .indiv-release-date {
@@ -216,5 +210,10 @@ p {
   grid-column: 1/2;
   grid-row: 2/3;
   align-self: center;
+  display: flex;
+  margin-right: 0;
+  position: relative;
+  left: -4%;
+  
 }
 }

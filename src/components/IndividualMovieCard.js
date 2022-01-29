@@ -83,6 +83,7 @@ function IndividualMovieCard({ movie, updateFavs }) {
             <div className="hLineShort indivline2"></div>
         
         </div>
+    
         <div className='all-movie-facts'>
           <div className="indiv-movie-info-container indiv-details-1">
             <div className="details-info">
@@ -102,9 +103,11 @@ function IndividualMovieCard({ movie, updateFavs }) {
             </p>
           </div>
 
+          
+          </div>
           <div className="indiv-details-2">
             <p className="indiv-release-date">
-              Release Date: {dateFormat(movie.release_date)}
+              Date: {dateFormat(movie.release_date)}
             </p>
             <p className="indiv-run-time">
               Runtime: {timeConvert(movie.runtime)}
@@ -112,7 +115,6 @@ function IndividualMovieCard({ movie, updateFavs }) {
             <p className="indiv-view-rating">
               Rating: {movie.vote_average * 10}%
             </p>
-          </div>
           </div>
         </div>
       </>
