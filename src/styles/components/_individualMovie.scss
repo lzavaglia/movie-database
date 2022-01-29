@@ -4,30 +4,47 @@
   margin-bottom: 0;
 }
 
-.indiv-mass-poster {
-  max-width: 270px;
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
+img.mass-poster {
+max-width: 230px;
+margin: 0 auto;
+display: block;
 }
+
+// .indiv-mass-poster {
+//   max-width: 270px;
+//   margin-left: auto;
+//   margin-right: auto;
+//   display: block;
+// }
+// .indiv-movie-title {
+//   font-family: $headerFont;
+//   font-size: $headerFontSize;
+//   font-weight: bold;
+//   color: $textColorLight;
+//   text-align: center;
+//   margin: 25px 0 15px 0;
+//   line-height: 60px;
+//   padding-left: 13%;
+// }
+
+
 .indiv-movie-title {
-  font-family: $headerFont;
-  font-size: $headerFontSize;
-  font-weight: bold;
-  color: $textColorLight;
-  text-align: center;
-  margin: 25px 0 15px 0;
-  line-height: 60px;
-  padding-left: 13%;
+    font-family: 'salden';
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 1rem;
 }
 .indiv-title-and-heart img {
-  padding-left: 20px;
+  padding-left: 16px;
   padding-top: 10px;
 }
+  
+
 .indiv-title-and-heart {
   display: flex;
   align-items: center;
-  // justify-content: center;
+  max-width: 80%;
+  margin: 0 auto;
 }
 p {
   font-family: $bodyFont;
@@ -35,21 +52,24 @@ p {
   color: $textColorLight;
   // margin: 0 auto;
 }
-.indiv-movie-descrip {
-  max-width: 75%;
+.indiv-movie-descrip,
+.all-movie-facts {
+  max-width: 80%;
   margin: 0 auto;
   text-align: left;
+  padding-bottom: 1.2rem;
+  padding-top: 2.2rem;
 }
-.indiv-details-1 {
-  max-width: 75%;
-  margin: 0 auto;
-  padding-top: 10px;
+
+@media(min-width: 482px) {
+  .indiv-movie-descrip {
+  max-width: 420px;
+  }
 }
-.indiv-details-2 {
-  max-width: 75%;
-  margin: 0 auto;
-  padding-bottom: 10px;
-}
+
+
+
+
 .hLineShort.indivline1 {
   width: 75%;
   margin: 0 auto;
@@ -75,7 +95,7 @@ p {
     color: $textColorLight;
   }
   .indiv-movie-descrip {
-    max-width: 75%;
+    max-width: 80%;
   }
 }
 
@@ -92,7 +112,7 @@ p {
     max-height: 450px;
     grid-column: 1/2;
     grid-row: 1/2;
-    margin: 0 50px 0 0;
+    
     justify-self: end;
   }
   // genre, legnth etc. needs to span across the bottom
@@ -115,15 +135,24 @@ p {
   }
   // description paragraph, right side below title
   .indiv-movie-descrip {
-    font-size: $indivBody;
     max-width: 80%;
-    margin: 0;
     grid-row: 2/3;
     grid-column: 2/3;
     padding-top: 40px;
     padding-bottom: 40px;
     justify-self: start;
+    
+    
   }
+
+  .descrip-data-title {
+    border-bottom: 2px solid $accentColor;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
   // movie title, right side above description paragraph
   .indiv-movie-title {
     font-family: $headerFont;
@@ -136,13 +165,13 @@ p {
     margin-bottom: 0;
     text-align: left;
     display: inline;
+    line-height: 0;
+    border-bottom: 2px solid $accentColor;
   }
   .indiv-title-and-heart {
     display: revert;
   }
-  p {
-    font-size: $indivBody;
-  }
+
   .indiv-release-date {
     text-align: left;
   }
@@ -179,4 +208,13 @@ p {
     align-self: end;
     display: revert;
   }
+}
+
+
+@media(min-width: 1000px) {
+.all-movie-facts {
+  grid-column: 1/2;
+  grid-row: 2/3;
+  align-self: center;
+}
 }
