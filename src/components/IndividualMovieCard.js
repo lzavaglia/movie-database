@@ -60,7 +60,7 @@ function IndividualMovieCard({ movie, updateFavs }) {
               alt={movie.title}
             />
           )}
-          <div>
+          <div className="descrip-data-title">
           <div className="indiv-title-and-heart">
             <p className="indiv-movie-title">{movie.title}</p>
             {isLiked === true ? (
@@ -77,12 +77,13 @@ function IndividualMovieCard({ movie, updateFavs }) {
               />
             )}
             </div>
-            <div className="hLineShort indivline1"></div>
+            <div className="indiv-line1"></div>
 
             <p className="indiv-movie-descrip">{movie.overview}</p>
             <div className="hLineShort indivline2"></div>
-          </div>
-
+        
+        </div>
+        <div className='all-movie-facts'>
           <div className="indiv-movie-info-container indiv-details-1">
             <div className="details-info">
               {movie.genres.length === 0 ? (
@@ -111,6 +112,7 @@ function IndividualMovieCard({ movie, updateFavs }) {
             <p className="indiv-view-rating">
               Rating: {movie.vote_average * 10}%
             </p>
+          </div>
           </div>
         </div>
       </>

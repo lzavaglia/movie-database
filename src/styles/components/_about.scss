@@ -1,17 +1,23 @@
 @import '../default/universalStyles.scss';
 
-.about-us-cont {
-    padding-left: 10%;
+div.wrapper {
+    margin: 0 auto;
+    max-width: 1600px;
 }
 
+
+.about-section {
+    margin: 0 1rem;
+
+}
+.about-container {
+    height: 60vh;
+}
 .about-us {
     font-family: $headerFont;
     font-size: $mobileTitleFontSize;
     color: $textColorLight;
     text-align: left;
-    margin-bottom: 5px;
-    margin-left: 10px;
-    margin-top: 0;
 }
 
 
