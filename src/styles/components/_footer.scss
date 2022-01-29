@@ -7,6 +7,7 @@ footer {
   font-family: $bodyFont;
   font-size: $bodyFontSize;
   max-width: 1600px;
+  padding-top: 50px;
 
   .hLine {
     height: 0.2rem;
@@ -24,6 +25,6 @@ footer {
   }
 
   @media (min-width: 382px) {
-    padding: 0 1rem;
+    padding: 50px 1rem;
   }
 }

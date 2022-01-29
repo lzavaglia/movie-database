@@ -17,10 +17,11 @@ display: block;
 
 .indiv-movie-title {
     font-family: 'salden';
-    font-size: 16px;
+    font-size: 24px;
     font-weight: bold;
     margin-top: 1rem;
 }
+
 .indiv-title-and-heart img {
   padding-left: 16px;
   padding-top: 10px;
@@ -47,14 +48,6 @@ p {
   padding-bottom: 1.2rem;
   padding-top: 2.2rem;
 }
-
-@media(min-width: 482px) {
-  .indiv-movie-descrip {
-  max-width: 420px;
-  }
-}
-
-
 
 
 .hLineShort.indivline1 {
@@ -110,7 +103,7 @@ p {
     text-align: left;
     justify-self: end;
     max-width: 100%;
-    margin: 0 0 0 0;
+    margin-right: 1rem;
     align-self: center;
   }
   .indiv-details-2 {
@@ -158,13 +151,17 @@ p {
     margin-bottom: 0;
     text-align: left;
     display: inline;
-    line-height: 0;
+    line-height: 1;
   }
   .indiv-title-and-heart {
     display: revert;
     margin: 0;
     padding-bottom: 1rem;
   }
+
+  .indiv-title-and-heart img {
+    padding-top: 0;
+    }
 
   .indiv-release-date {
     text-align: left;
@@ -209,11 +206,9 @@ p {
 .all-movie-facts {
   grid-column: 1/2;
   grid-row: 2/3;
-  align-self: center;
-  display: flex;
-  margin-right: 0;
-  position: relative;
-  left: -4%;
+  max-width: 306px;
+display: flex;
+flex-direction: column;
   
 }
 }
