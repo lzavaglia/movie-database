@@ -1,48 +1,45 @@
-@use '../default/universalStyles' as *;
-@use '../utilities/mixins' as *;
-
+@use "../default/universalStyles" as *;
+@use "../utilities/mixins" as *;
 
 .btn-main-nav {
+  @include flatten;
+  border: none;
+  background: none;
+  margin-right: em(12);
 
-    @include flatten;
-    border: none;
-    background: none;
-    margin-right: em(12);
+  &:hover {
+    cursor: pointer;
+  }
 
-    &:hover{
-        cursor: pointer;
+  .line {
+    width: 50px;
+    height: 5px;
+    background-color: $iconOutline;
+    display: block;
+    margin: 8px auto;
+    transition: all 0.3s ease-in-out;
+
+    .show &:nth-child(2) {
+      width: 0;
     }
 
-    .line{
-        width: 50px;
-        height: 5px;
-        background-color: $iconOutline;
-        display: block;
-        margin: 8px auto;
-        transition: all 0.3s ease-in-out;
-
-        .show &:nth-child(2){
-            width: 0;
-        }
-
-        .show &:nth-child(1), .btn-main-nav.show .line:nth-child(3){
-            transition-delay: 0s;
-        }
-
-        .show &:nth-child(1){
-            transform: translateY(13px);
-        }
-
-        .show &:nth-child(3){
-            transform: translateY(-13px) rotate(90deg);
-        }
-
-    }
-      
-    .show & {
-        transition: all 0.2s ease-in-out;
-        transition-delay: 0.2s;
-        transform: rotate(45deg);
+    .show &:nth-child(1),
+    .btn-main-nav.show .line:nth-child(3) {
+      transition-delay: 0s;
     }
 
+    .show &:nth-child(1) {
+      transform: translateY(13px);
+    }
+
+    .show &:nth-child(3) {
+      transform: translateY(-13px) rotate(90deg);
+    }
+  }
+
+  .show & {
+    transition: all 0.2s ease-in-out;
+    transition-delay: 0.2s;
+    transform: rotate(45deg);
+  }
 }

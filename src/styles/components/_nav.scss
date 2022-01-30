@@ -1,43 +1,40 @@
-@use '../default/universalStyles' as *;
-@use '../utilities/mixins' as *;
+@use "../default/universalStyles" as *;
+@use "../utilities/mixins" as *;
 
 .main-nav {
+  width: 0;
+  background-color: $backgroundColor;
+  height: 0;
+  overflow: hidden;
+  transition: height 0.7s ease, visibility 0s 0.7s;
 
-    width: 0;
-    background-color: $backgroundColor;
-    height: 0;
-    overflow: hidden;
-    transition: height 0.7s ease, visibility 0s 0.7s;
+  .show & {
+    transition: height 0.7s ease, visibility 0s;
+    width: 100%;
+    visibility: visible;
+    height: 160px;
+  }
 
-    .show & {
-        transition: height 0.7s ease, visibility 0s;
-        width: 100%;
-        visibility: visible;
-        height: 160px;
+  ul {
+    @include flatten($is-list: true);
+  }
+  a {
+    color: $textColorLight;
+    text-decoration: none;
+    line-height: 50px;
+    font-size: 1.3em;
+    font-weight: bold;
+    padding: 0 12px;
+    text-transform: uppercase;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $accentColor;
     }
+  }
 
-    ul {
-        @include flatten($is-list: true);
-    }
-    a {
-        color: $textColorLight;
-        text-decoration: none;
-        line-height: 50px;
-        font-size: 1.3em;
-        font-weight: bold;
-        padding: 0 12px;
-        text-transform: uppercase;
-
-        &:hover,
-        &:focus,
-        &:active {
-            color: $accentColor;
-        }
-    }
-
-    @media (min-width: 899px){
-
-        order: 9999;
-    }
-
+  @media (min-width: 899px) {
+    order: 9999;
+  }
 }

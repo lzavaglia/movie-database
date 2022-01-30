@@ -1,20 +1,18 @@
 //Components
-@use './components/footer';
-@use './components/header';
-@use './buttons/hamburger';
-@use './components/nav';
-@use './buttons/navButtons';
-@use './components/main';
-@use './components/favourites.scss';
-@use './components/wrapper';
+@use "./components/footer";
+@use "./components/header";
+@use "./buttons/hamburger";
+@use "./components/nav";
+@use "./buttons/navButtons";
+@use "./components/main";
+@use "./components/favourites.scss";
+@use "./components/wrapper";
 
 // Page Imports
-@use './components/about';
-@use './components/individualMovie';
+@use "./components/about";
+@use "./components/individualMovie";
 
-//Google fonts - Import
-@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+//Imported fonts - Import
 
 @import url("https://use.typekit.net/skr7pmc.css");
-@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@200;300;400;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Prompt:wght@200;300;400;500&display=swap");

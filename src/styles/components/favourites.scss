@@ -1,31 +1,28 @@
-@use '../default/universalStyles' as *;
-
+@use "../default/universalStyles" as *;
 
 div.fLine,
 div.aLine {
-    height: 1px;
-    width: 67%;
-    background-color: $accentColor;
-    margin-bottom: 3rem;
-    bottom: 0rem;
-    order: 10000;
+  height: 1px;
+  width: 67%;
+  background-color: $accentColor;
+  margin-bottom: 3rem;
+  bottom: 0rem;
+  order: 10000;
 
-    @media(min-width: 537px) {
-        width: 47%;
-    }
+  @media (min-width: 537px) {
+    width: 47%;
+  }
 
-    @media(min-width: 740px) {
-        width: 31%;
-    }
+  @media (min-width: 740px) {
+    width: 31%;
+  }
 }
 
-
 h2.favourites-title {
-    font-size: $mobileTitleFontSize;
-    margin-bottom: 2px;
+  font-size: $mobileTitleFontSize;
+  margin-bottom: 2px;
 
-    @media(min-width: 899px) {
-        font-size: $headerFontSize;
-    }
-
+  @media (min-width: 899px) {
+    font-size: $headerFontSize;
+  }
 }

@@ -1,6 +1,4 @@
-import { Link } from "react-router-dom";
 import { useState } from "react";
-import moviePoster from "../images/massImg.png";
 import "../styles/components/_moviePoster.scss";
 import "../styles/components/_individualMovie.scss";
 import noPoster from "../images/no-movie-poster.jpg";
@@ -61,51 +59,46 @@ function IndividualMovieCard({ movie, updateFavs }) {
             />
           )}
           <div className="descrip-data-title">
-          <div className="indiv-title-and-heart">
-            <p className="indiv-movie-title">{movie.title}</p>
-            <span className="heart-span">
-            {isLiked === true ? (
-              <img
-                src={filledHeart}
-                alt="remove from favs"
-                onClick={() => removeMovie(movie)}
-              />
-            ) : (
-              <img
-                src={heart}
-                alt="add to favs"
-                onClick={() => addMovie(movie)}
-              />
-            )}
-            </span>
+            <div className="indiv-title-and-heart">
+              <p className="indiv-movie-title">{movie.title}</p>
+              <span className="heart-span">
+                {isLiked === true ? (
+                  <img
+                    src={filledHeart}
+                    alt="remove from favs"
+                    onClick={() => removeMovie(movie)}
+                  />
+                ) : (
+                  <img
+                    src={heart}
+                    alt="add to favs"
+                    onClick={() => addMovie(movie)}
+                  />
+                )}
+              </span>
             </div>
-            <div className="indiv-line1"></div>
 
             <p className="indiv-movie-descrip">{movie.overview}</p>
-            <div className="hLineShort indivline2"></div>
-        
-        </div>
-    
-        <div className='all-movie-facts'>
-          <div className="indiv-movie-info-container indiv-details-1">
-            <div className="details-info">
-              {movie.genres.length === 0 ? (
-                <p className="no-genre">N/A</p>
-              ) : (
-                <p className="indiv-movie-genre">
-                  Genres:{" "}
-                  {movie.genres.map((genres) => genres.name).length > 1
-                    ? movie.genres.map((genres) => genres.name).join(", ")
-                    : movie.genres.map((genres) => genres.name)}
-                </p>
-              )}
-            </div>
-            <p className="indiv-language">
-              Original Language: {movie.original_language}
-            </p>
           </div>
 
-          
+          <div className="all-movie-facts">
+            <div className="indiv-movie-info-container indiv-details-1">
+              <div className="details-info">
+                {movie.genres.length === 0 ? (
+                  <p className="no-genre">N/A</p>
+                ) : (
+                  <p className="indiv-movie-genre">
+                    Genres:{" "}
+                    {movie.genres.map((genres) => genres.name).length > 1
+                      ? movie.genres.map((genres) => genres.name).join(", ")
+                      : movie.genres.map((genres) => genres.name)}
+                  </p>
+                )}
+              </div>
+              <p className="indiv-language">
+                Original Language: {movie.original_language}
+              </p>
+            </div>
           </div>
           <div className="indiv-details-2">
             <p className="indiv-release-date">

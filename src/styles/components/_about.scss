@@ -1,70 +1,53 @@
-@import '../default/universalStyles.scss';
+@import "../default/universalStyles.scss";
 
 div.wrapper {
-    margin: 0 auto;
-    max-width: 1600px;
+  margin: 0 auto;
+  max-width: 1600px;
 }
-
 
 .about-section {
-    margin: 0 1rem;
-
+  margin: 0 1rem;
 }
 .about-container {
-    height: 60vh;
+  height: 60vh;
 }
 .about-us {
-    font-family: $headerFont;
-    font-size: $mobileTitleFontSize;
-    color: $textColorLight;
-    text-align: left;
+  font-family: $headerFont;
+  font-size: $mobileTitleFontSize;
+  color: $textColorLight;
+  text-align: left;
+  margin-bottom: 2px;
 }
 
-
 .about-welcome {
-    font-family: $headerFont;
-    font-size: $mobileTitleFontSize;
-    color: $textColorLight;
-    text-align: center;
+  font-family: $headerFont;
+  font-size: $mobileTitleFontSize;
+  color: $textColorLight;
 }
 
 .about-text {
-    font-family: $bodyFont;
-    font-size: $mobileBodyTextSize;
-    color: $textColorLight;
-    text-align: center;
-    margin: 0 auto;
-    margin-bottom: 30px;
-    max-width: 80%;
-}
-
-@media (min-width: 520px) {
-    .about-text {
-        max-width: 450px;
-    } 
+  font-family: $bodyFont;
+  font-size: $mobileBodyTextSize;
+  color: $textColorLight;
+  margin-bottom: 30px;
 }
 
 @media (min-width: 1000px) {
-
-    .about-welcome {
-        font-family: $headerFont;
-        font-size: $headerFontSize;
-        color: $textColorLight;
-        text-align: center;
-        margin: 0;
-    }
-    .about-text {
-        max-width: 675px;
-        font-size: $bodyFontSize;
-        text-align: left;
-        margin: 0 auto;
-        margin-top: 60px;
-        margin-bottom: 60px;
-    }
-    .about-us {
-        font-size: $headerFontSize;
-        text-align: left;
-        margin-left: 10px;
-    }
-
+  .about-welcome {
+    font-family: $headerFont;
+    color: $textColorLight;
+    margin: 0;
+  }
+  .about-text {
+    max-width: 100%;
+    font-size: $bodyFontSize;
+    text-align: left;
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+  .about-us {
+    font-size: $headerFontSize;
+    text-align: left;
+    margin-left: 10px;
+  }
 }
