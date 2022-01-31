@@ -6,7 +6,7 @@ import "./styles/styles.scss";
 
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename="movie-app">
       <Router />
     </BrowserRouter>
   </React.StrictMode>,
