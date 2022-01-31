@@ -7,29 +7,25 @@ $heart: #eb51b6;
 $iconOutline: #fff;
 $hover: #fff;
 
-
 //Type
 
-$headerFont:'Acme', sans-serif;
-$bodyFont:'Open Sans', sans-serif;
+$headerFont: "Salden", sans-serif;
+$bodyFont: "Prompt", sans-serif;
 
 //Type colour
-
 $textColorLight: #fff;
 $textColorDark: #000;
 
-
-
 //Font Size
-$mobileTitleFontSize: 1.5rem;
+$mobileTitleFontSize: 1.375rem;
 $mobileBodyTextSize: 1rem;
 
 $titleFontSize: 3rem;
-$headerFontSize: 3.75rem;
-$bodyFontSize: 1.5rem;
+$headerFontSize: 1.875rem;
+$bodyFontSize: 1rem;
+$indivBody: 1.25rem;
 $hamburgerTextSize: 2.25rem;
 
 // Layout
-$pageMarginDesktop: rem(8) rem(4) rem(0) rem(4);
-$pageMarginMobile: rem(4) rem(2) rem(0) rem(2);
-
+$pageMarginDesktop: 8rem 4rem 0 4rem;
+$pageMarginMobile: 4rem 1rem 0 1rem;

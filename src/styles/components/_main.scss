@@ -1,0 +1,14 @@
+@import '../default/universalStyles.scss';
+
+h1,
+h2,
+h3  {
+    font-family: $headerFont;
+    color: $textColorLight;
+}
+
+p {
+    font-family: $bodyFont;
+    color: $textColorLight;
+}
+

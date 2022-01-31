@@ -4,8 +4,8 @@ function Footer() {
     return (
         <footer>
             <div className='hLine'></div>
-            <div className='hLine'></div>
-            <p><span>&copy; {getYear()} Chris Zsolyomy</span> <span>Lily Zavaglia</span> <span>Lucille Chesshire</span></p>
+            <div className='hLine hLine2'></div>
+            <p>&copy; {getYear()} Chris Zsolyomy</p><p>Lucille Chesshire</p><p>Lily Zavaglia</p>
         </footer>
     )
 }

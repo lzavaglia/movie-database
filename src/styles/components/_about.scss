@@ -1,64 +1,53 @@
-@import '../default/universalStyles.scss';
+@import "../default/universalStyles.scss";
 
-.about-us {
-    font-family: $headerFont;
-    font-size: $mobileTitleFontSize;
-    color: $textColorLight;
-    text-align: left;
-    margin-bottom: 5px;
-    margin-left: 10px;
-    margin-top: 0;
+div.wrapper {
+  margin: 0 auto;
+  max-width: 1600px;
 }
 
-.hLineShort {
-    height: 0.2rem;
-    width: 200px;
-    background-color: $accentColor;
-    margin-bottom: 50px;
+.about-section {
+  margin: 0 1rem;
+}
+.about-container {
+  height: 60vh;
+}
+.about-us {
+  font-family: $headerFont;
+  font-size: $mobileTitleFontSize;
+  color: $textColorLight;
+  text-align: left;
+  margin-bottom: 2px;
 }
 
 .about-welcome {
-    font-family: $headerFont;
-    font-size: $mobileTitleFontSize;
-    color: $textColorLight;
-    text-align: center;
+  font-family: $headerFont;
+  font-size: $mobileTitleFontSize;
+  color: $textColorLight;
 }
 
 .about-text {
-    font-family: $bodyFont;
-    font-size: $mobileBodyTextSize;
-    color: $textColorLight;
-    text-align: center;
-    margin-bottom: 19.92px;
-    margin-top: 0;
-}
-
-@media (min-width: 520px) {
-    .about-text {
-        max-width: 400px;
-    } 
+  font-family: $bodyFont;
+  font-size: $mobileBodyTextSize;
+  color: $textColorLight;
+  margin-bottom: 30px;
 }
 
 @media (min-width: 1000px) {
-
-    .about-welcome {
-        font-family: $headerFont;
-        font-size: $headerFontSize;
-        color: $textColorLight;
-        text-align: center;
-    }
-    .about-text {
-        max-width: 675px;
-        font-size: $bodyFontSize;
-        text-align: center;
-        margin: 0 auto;
-    }
-    .about-us {
-        font-size: $headerFontSize;
-        text-align: left;
-        margin-left: 10px;
-    }
-    .hLineShort {
-        width: 400px;
-    }
+  .about-welcome {
+    font-family: $headerFont;
+    color: $textColorLight;
+    margin: 0;
+  }
+  .about-text {
+    max-width: 100%;
+    font-size: $bodyFontSize;
+    text-align: left;
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+  .about-us {
+    font-size: $headerFontSize;
+    text-align: left;
+    margin-left: 10px;
+  }
 }

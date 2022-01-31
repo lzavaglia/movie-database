@@ -1,137 +1,162 @@
-@import '../default/universalStyles.scss';
+@import "../default/universalStyles.scss";
 
-.indiv-poster-container {
-    margin-bottom: 0;
+img.mass-poster {
+  max-width: 230px;
+  margin: 0 auto;
+  display: block;
 }
-.indiv-mass-poster {
-    max-width: 270px;
+
+.indiv-details-2 {
+  margin: 0 auto;
+  width: 80%;
+
+  @media (min-width: 1000px) {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    max-width: 80%;
+    text-align: left;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
 }
 
 .indiv-movie-title {
+  font-family: "salden";
+  font-size: 20px;
+  font-weight: bold;
+
+  @media (min-width: 520px) {
     font-family: $headerFont;
-    font-size: $mobileTitleFontSize;
-    color: $textColorLight;
-    margin: 0 auto;
+  }
+
+  @media (min-width: 1000px) {
+    font-family: $headerFont;
+    font-weight: bold;
+    font-size: $headerFontSize;
+    max-width: 90%;
+    grid-row: 1;
+    grid-column: 2/3;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: left;
+    display: inline;
+    line-height: 1;
+  }
+}
+
+.indiv-title-and-heart {
+  display: flex;
+  align-items: center;
+  max-width: 80%;
+  margin: 0 auto;
+  gap: 7px;
+  margin-top: 1rem;
+
+  @media (min-width: 768px) {
+    padding-bottom: 0.5rem;
+  }
+
+  @media (min-width: 1000px) {
+    margin: 0;
+    padding-bottom: 1rem;
+    max-width: 100%;
+  }
+}
+
+.indiv-movie-descrip,
+.all-movie-facts {
+  max-width: 80%;
+  margin: 0 auto;
+  text-align: left;
+  padding-bottom: 1.2rem;
+  padding-top: 2.2rem;
 }
 
 .indiv-movie-descrip {
-    font-family: $bodyFont;
-    font-size: $mobileBodyTextSize;
-    color: $textColorLight;
-    max-width: 70%;
-    margin: 0 auto;
+  @media (min-width: 520px) {
+    max-width: 80%;
+  }
 
+  @media (min-width: 768px) {
+    border-top: 2px solid #00c6ff;
+  }
+
+  @media (min-width: 1000px) {
+    max-width: 100%;
+    grid-row: 2/3;
+    grid-column: 2/3;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    justify-self: start;
+    margin: 0;
+    border-top: 2px solid $accentColor;
+  }
 }
-.indiv-release-date {
-    font-family: $bodyFont;
-    font-size: $mobileBodyTextSize;
-    color: $textColorLight;
-    text-align: center;
 
-}
-.indiv-run-time {
-    font-family: $bodyFont;
-    font-size: $mobileBodyTextSize;
-    color: $textColorLight;
-    text-align: center;
-
-}
-.indiv-view-rating {
-    font-family: $bodyFont;
-    font-size: $mobileBodyTextSize;
-    color: $textColorLight;
-    text-align: center;
-
-}
-.indiv-movie-genre {
-    font-family: $bodyFont;
-    font-size: $mobileBodyTextSize;
-    color: $textColorLight;
-    text-align: center;
-
+.all-movie-facts {
+  @media (min-width: 1000px) {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    max-width: 306px;
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 @media (min-width: 520px) {
-    .indiv-movie-title {
-        font-family: $headerFont;
-        font-size: $mobileTitleFontSize;
-        color: $textColorLight;
-    }
-    
-    .indiv-movie-rating {
-        font-family: $headerFont;
-        font-size: $mobileTitleFontSize;
-        color: $textColorLight;
-    }
-    
-    .indiv-movie-descrip {
-        font-family: $bodyFont;
-        font-size: $mobileBodyTextSize;
-        color: $textColorLight;
-        max-width: 70%;
-        margin: 0 auto;
-    
-    }
-    .indiv-release-date {
-        font-family: $bodyFont;
-        font-size: $mobileBodyTextSize;
-        color: $textColorLight;
-        text-align: center;
-    
-    }
-    .indiv-run-time {
-        font-family: $bodyFont;
-        font-size: $mobileBodyTextSize;
-        color: $textColorLight;
-        text-align: center;
-    
-    }
-    .indiv-view-rating {
-        font-family: $bodyFont;
-        font-size: $mobileBodyTextSize;
-        color: $textColorLight;
-        text-align: center;
-    
-    }
-    .indiv-movie-genre {
-        font-family: $bodyFont;
-        font-size: $mobileBodyTextSize;
-        color: $textColorLight;
-        text-align: center;
-    
-    }
+  img.indiv-mass-poster {
+    max-width: 270px;
+    max-height: 405px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 @media (min-width: 1000px) {
-    .indiv-movie-title {
-        font-size: $headerFontSize;
-    }
-    
-    .indiv-movie-rating {
-        font-size: $bodyFontSize;
-    }
-    
-    .indiv-movie-descrip {
-        font-size: $bodyFontSize;
-        max-width: 70%;
-        margin: 0 auto;
-    
-    }
-    .indiv-release-date {
-        font-size: $bodyFontSize;
-    
-    }
-    .indiv-run-time {
-        font-size: $bodyFontSize;
+  .indiv-poster-container {
+    display: grid;
+    grid-template-rows: 1fr 150px;
+    grid-template-columns: 500px 1fr;
+  }
 
-    
-    }
-    .indiv-view-rating {
-        font-size: $bodyFontSize;
-    
-    }
-    .indiv-movie-genre {
-        font-size: $bodyFontSize;
-    
-    }
+  img.indiv-mass-poster {
+    max-width: 300px;
+    max-height: 450px;
+    grid-column: 1/2;
+    grid-row: 1/2;
+
+    justify-self: end;
+  }
+
+  .indiv-details-1 {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    max-width: 80%;
+    text-align: left;
+    justify-self: end;
+    max-width: 100%;
+    align-self: center;
+    width: 306px;
+  }
+
+  .descrip-data-title {
+    border-bottom: 2px solid $accentColor;
+    align-items: center;
+    flex-direction: column;
+    max-width: 90%;
+  }
+}
+
+.heart-span {
+  border: 1px solid white;
+  padding: 5px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.heart-span img {
+  width: 16px;
 }

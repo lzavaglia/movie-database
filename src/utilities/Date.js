@@ -1,6 +1,6 @@
-function getYear(){
-    const d = new Date();
-    return d.getFullYear();
+function getYear() {
+  const d = new Date();
+  return d.getFullYear();
 }
 
-export { getYear }
+export { getYear };
