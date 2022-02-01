@@ -8,9 +8,7 @@ div.wrapper {
 .about-section {
   margin: 0 1rem;
 }
-.about-container {
-  height: 60vh;
-}
+
 .about-us {
   font-family: $headerFont;
   font-size: $mobileTitleFontSize;
@@ -50,4 +48,13 @@ div.wrapper {
     text-align: left;
     margin-left: 10px;
   }
+}
+
+.api-logo {
+  width: 70px;
+  height: 70px;
+}
+
+.credits {
+  padding-top: 2rem;
 }

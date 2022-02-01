@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { appTitle } from "../globals/Variables";
+import apiLogo from '../images/tmdb-logo.svg';
 
 const AboutPage = () => {
   useEffect(() => {
@@ -19,6 +20,10 @@ const AboutPage = () => {
           now as well as what movies are yet to come. Don't forget to add a
           heart to your favourite flicks to add them to your favourites!
         </p>
+        <div className='credits'>
+            <p>This product uses the TMDb API but is not endorsed or certified by TMDb.</p>
+            <img className="api-logo" src={apiLogo}></img>
+        </div>
       </section>
     </div>
   );
